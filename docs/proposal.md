@@ -3,8 +3,10 @@ layout: default
 title:  Proposal
 ---
 
-# Summary of the Project
+# 2.2 Summary of the Project
+blah blah blah
 
-# AI/ML Algorithms
+# 2.3 AI/ML Algorithms
+Q-learning and reinforcement learning. Plans to implement computer vision if team finishes early. For example, recognizing how to avoid zombies when finding an optimal path. 
 
-# Evaluation Plan
+# 2.4 Evaluation Plan
