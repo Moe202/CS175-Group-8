@@ -9,8 +9,8 @@ title:  Team
 ## Mohammed Adel Alabdullatif
 ***UCI Net ID***: maalabdu
 
-## USER 2
-***UCI Net ID***: ucinetid
+## Brian Wong
+***UCI Net ID***: wongbm2
 
-## USER 3
-***UCI Net ID***: ucinetid
+## Hongtao Liu
+***UCI Net ID***: hongtal1
