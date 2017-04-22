@@ -12,5 +12,5 @@ title:  Team
 ## Brian Wong
 ***UCI Net ID***: wongbm2
 
-## Hongtao Liu(Faber)
+## Hongtao Liu
 ***UCI Net ID***: hongtal1
