@@ -44,7 +44,7 @@ class TabQAgent:
         self.logger.addHandler(logging.StreamHandler(sys.stdout))
         
         self.actions = ["movewest 1", "moveeast 1", "movenorth 1", "movesouth 1", "jumpnorth 1", "jumpsouth 1", "jumpwest 1", "jumpeast 1"]
-        self.action_cost = [0, 0, 0, 0, 1, 1, 1, 1]
+        self.action_cost = [0, 0, 0, 0, 3, 3, 3, 3]
         self.q_table = {}
         self.canvas = None
         self.root = None
@@ -211,7 +211,7 @@ max_retries = 3
 if agent_host.receivedArgument("test"):
     num_repeats = 1
 else:
-    num_repeats = 300
+    num_repeats = 150
 
 cumulative_rewards = []
 for i in range(num_repeats):
