@@ -174,15 +174,15 @@ class TabQAgent:
                     if not world_state.is_mission_running:
                         break
     
-    # process final reward
-    self.logger.debug("Final reward: %d" % current_r)
+        # process final reward
+        self.logger.debug("Final reward: %d" % current_r)
         total_reward += current_r
         
         # update Q values
         if self.prev_s is not None and self.prev_a is not None:
             self.updateQTableFromTerminatingState( current_r )
     
-                            return total_reward
+        return total_reward
 
 sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
 
@@ -232,7 +232,7 @@ for i in range(num_repeats):
             else:
                 time.sleep(2.5)
 
-print "Waiting for the mission to start",
+    print "Waiting for the mission to start",
     world_state = agent_host.getWorldState()
     while not world_state.has_mission_begun:
         sys.stdout.write(".")
@@ -240,7 +240,7 @@ print "Waiting for the mission to start",
         world_state = agent_host.getWorldState()
         for error in world_state.errors:
             print "Error:",error.text
-print
+    print
     
     # -- run the agent in the world -- #
     cumulative_reward = agent.run(agent_host)
