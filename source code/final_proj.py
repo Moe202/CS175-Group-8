@@ -205,13 +205,13 @@ with open(mission_file, 'r') as f:
     mission_xml = f.read()
     my_mission = MalmoPython.MissionSpec(mission_xml, True)
 
-# Let the agent run 150 times
+# Let the agent run 300 times
 max_retries = 3
 
 if agent_host.receivedArgument("test"):
     num_repeats = 1
 else:
-    num_repeats = 150
+    num_repeats = 300
 
 cumulative_rewards = []
 for i in range(num_repeats):
