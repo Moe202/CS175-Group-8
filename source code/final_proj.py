@@ -32,7 +32,7 @@ class TabQAgent:
     
     def __init__(self):
         self.epsilon = 0.01 # chance of taking a random action instead of the best
-        self.alpha = 0.1
+        self.alpha = 0.1 # learning rate
         self.gamma = 1.0 # discount rate
         
         self.logger = logging.getLogger(__name__)
@@ -44,7 +44,7 @@ class TabQAgent:
         self.logger.addHandler(logging.StreamHandler(sys.stdout))
         
         self.actions = ["movewest 1", "moveeast 1", "movenorth 1", "movesouth 1", "jumpnorth 1", "jumpsouth 1", "jumpwest 1", "jumpeast 1"]
-        self.action_cost = [0, 0, 0, 0, 10, 10, 10, 10]
+        self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
         self.q_table = {}
         self.canvas = None
         self.root = None
@@ -118,13 +118,13 @@ class TabQAgent:
             self.logger.error("Failed to send command: %s" % e)
         
         time.sleep(0.1)
-        return current_r - self.action_cost[a]
+        return (current_r)
     
     def run(self, agent_host):
         """run the agent on the world"""
         
         total_reward = 0
-        
+        cost = 0
         self.prev_s = None
         self.prev_a = None
         
@@ -134,7 +134,7 @@ class TabQAgent:
         world_state = agent_host.getWorldState()
         while world_state.is_mission_running:
             
-            current_r = 0
+            current_r = 0 - cost
             
             if is_first_action:
                 # wait until have received a valid observation
@@ -147,13 +147,14 @@ class TabQAgent:
                         current_r += reward.getValue()
                     if world_state.is_mission_running and len(world_state.observations)>0 and not world_state.observations[-1].text=="{}":
                         total_reward += self.act(world_state, agent_host, current_r)
+                        cost = self.action_cost[self.prev_a]
                         break
                     if not world_state.is_mission_running:
                         break
                 is_first_action = False
             else:
                 # wait for non-zero reward
-                while world_state.is_mission_running and current_r == 0:
+                while world_state.is_mission_running and current_r == 0-cost:
                     time.sleep(0.1)
                     world_state = agent_host.getWorldState()
                     for error in world_state.errors:
@@ -170,6 +171,7 @@ class TabQAgent:
                         current_r += reward.getValue()
                     if world_state.is_mission_running and len(world_state.observations)>0 and not world_state.observations[-1].text=="{}":
                         total_reward += self.act(world_state, agent_host, current_r)
+                        cost = self.action_cost[self.prev_a]
                         break
                     if not world_state.is_mission_running:
                         break
@@ -181,7 +183,7 @@ class TabQAgent:
         # update Q values
         if self.prev_s is not None and self.prev_a is not None:
             self.updateQTableFromTerminatingState( current_r )
-    
+
         return total_reward
 
 sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
@@ -205,7 +207,7 @@ with open(mission_file, 'r') as f:
     mission_xml = f.read()
     my_mission = MalmoPython.MissionSpec(mission_xml, True)
 
-# Let the agent run 300 times
+# Let the agent run 150 times
 max_retries = 3
 
 if agent_host.receivedArgument("test"):
