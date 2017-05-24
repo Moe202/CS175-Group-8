@@ -199,7 +199,7 @@ if agent_host.receivedArgument("help"):
     exit(0)
 
 # -- set up the mission -- #
-mission_file = './level_3_map.xml'     # Change this to load different maps/missions
+mission_file = './level1.xml'     # Change this to load different maps/missions
 with open(mission_file, 'r') as f:
     print "Loading mission from %s" % mission_file
     mission_xml = f.read()
