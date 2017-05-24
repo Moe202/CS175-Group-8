@@ -44,7 +44,7 @@ class TabQAgent:
         self.logger.addHandler(logging.StreamHandler(sys.stdout))
         
         self.actions = ["movewest 1", "moveeast 1", "movenorth 1", "movesouth 1", "jumpnorth 1", "jumpsouth 1", "jumpwest 1", "jumpeast 1"]
-        self.action_cost = [0, 0, 0, 0, 3, 3, 3, 3]
+        self.action_cost = [0, 0, 0, 0, 10, 10, 10, 10]
         self.q_table = {}
         self.canvas = None
         self.root = None
@@ -85,7 +85,7 @@ class TabQAgent:
         current_s = "%d:%d" % (int(obs[u'XPos']), int(obs[u'ZPos']))
         self.logger.debug("State: %s (x = %.2f, z = %.2f)" % (current_s, float(obs[u'XPos']), float(obs[u'ZPos'])))
         if not self.q_table.has_key(current_s):
-            self.q_table[current_s] = ([0] * len(self.actions))
+            self.q_table[current_s] = [0, 0, 0, 0, -2, -2, -2, -2]
         
         # update Q values
         if self.prev_s is not None and self.prev_a is not None:
