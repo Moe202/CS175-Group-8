@@ -3,8 +3,11 @@ layout: default
 title:  Home
 ---
 
-## Welcome our Malmo Reward-Finder Project. CS 175: Project in AI (in Minecraft)
-### Project Team:
+## Welcome our Malmo Reward-Finder Project
+#### CS 175: Project in AI
+
+
+### Team:
 - Brian Wong
 - Mohammed Adel Alabdullatif
 - Hongtao Liu
@@ -21,4 +24,4 @@ Level 4: 3D terrain, hills, hazards, blocks, and timed jumps
 Level 5: Moonshot case- 3D terrain, hills, hazards, blocks, timed jumps, and zombies     
 
 Inspiration:
-<iframe src="https://www.youtube.com/watch?v=9XRL6d-yxp4" width="600" height="600" ></iframe>
+<iframe src="https://www.youtube.com/watch?v=9XRL6d-yxp4" width="600" height="600" frameborder="0" allowfullscreen></iframe>
