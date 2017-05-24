@@ -3,32 +3,22 @@ layout: default
 title:  Home
 ---
 
-_Add your text here_
+## Welcome our Malmo Reward-Finder Project. CS 175: Project in AI (in Minecraft)
+### Project Team:
+- Brian Wong
+- Mohammed Adel Alabdullatif
+- Hongtao Liu
 
 
-What's Markdown (`.md`)?
-
-Markdown is markup that lets you write hypertext (HTML) documents
-in easy-to-read and easy-to-write plain text.
-No angle brackets `<></>` required for
-paragraphs, lists, blockquotes, tables, etc.
+# Project Summary
+&nbsp;&nbsp;&nbsp;&nbsp; Solve an intricate maze with traps, lava, etc. Optimize by trying to improve the time the agent solves the maze or by finding the most optimal path. The input of the project would require a section of the map the agent would traverse. Output would be the most optimal path discovered by the agent. Lastly, we assume that every block is unknown and the agent must discover each path. Direct applications of this project would allow users to optimally beat multiple video games. At a high level, reinforcement learning discovered from this project can determine the ideal behavior within the manufacturing, delivery, and finance industries.
 
 
-This is a paragraph (in Markdown). Some more
-text here.
+Level 1: Flat terrain, with edge boundary   
+Level 2: Flat terrain, with edge boundary and hazards in the middle of the map  
+Level 3: 3D terrain, hills, hazards, blocks  
+Level 4: 3D terrain, hills, hazards, blocks, and timed jumps  
+Level 5: Moonshot case- 3D terrain, hills, hazards, blocks, timed jumps, and zombies     
 
-This is another paragraph.
-
-This is a list:
-
-- Orange
-- Apple
-- Blueberry
-
-
-
-Just getting started with Markdown?
-See the [HTML <-> Markdown Quick Reference (Cheat Sheet)][quickref].
-
-
-[quickref]: https://github.com/mundimark/quickrefs/blob/master/HTML.md
+Inspiration:
+<iframe src="https://www.youtube.com/watch?v=9XRL6d-yxp4" width="600" height="600" ></iframe>
