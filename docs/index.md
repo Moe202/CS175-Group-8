@@ -23,6 +23,10 @@ Level 3: 3D terrain, hills, hazards, blocks
 Level 4: 3D terrain, hills, hazards, blocks, and timed jumps  
 Level 5: Moonshot case- 3D terrain, hills, hazards, blocks, timed jumps, and zombies     
 
-Inspiration:
-<iframe src="https://www.youtube.com/watch?v=9XRL6d-yxp4"
-  width="560" height="315" frameborder="0" allowfullscreen></iframe>
+Inspiration: https://www.youtube.com/watch?v=9XRL6d-yxp4
+<html>
+    <body>
+        <iframe src="https://www.youtube.com/watch?v=9XRL6d-yxp4"
+         width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    </body>
+</html>
