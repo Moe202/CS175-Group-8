@@ -44,7 +44,8 @@ class TabQAgent:
         self.logger.addHandler(logging.StreamHandler(sys.stdout))
         # Set of actions
         self.actions = ["movewest 1", "moveeast 1", "movenorth 1", "movesouth 1", "jumpnorth 1", "jumpsouth 1", "jumpwest 1", "jumpeast 1"]
-        # Additional action costs to take into account (Each action costs 1 by default). Action cost = 1 + self.action_cost[i]
+        # Additional action costs to take into account (Each action costs 1 by default). 
+        # Action cost = 1 + self.action_cost[i]
         self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]  
         self.q_table = {}
         self.canvas = None
