@@ -16,7 +16,7 @@
 # DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 # ------------------------------------------------------------------------------------------------
-
+# Used Malmo's tutorial_6.py as a template
 
 import MalmoPython
 import json
@@ -42,9 +42,10 @@ class TabQAgent:
             self.logger.setLevel(logging.INFO)
         self.logger.handlers = []
         self.logger.addHandler(logging.StreamHandler(sys.stdout))
-        
+        # Set of actions
         self.actions = ["movewest 1", "moveeast 1", "movenorth 1", "movesouth 1", "jumpnorth 1", "jumpsouth 1", "jumpwest 1", "jumpeast 1"]
-        self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
+        # Additional action costs to take into account (Each action costs 1 by default). Action cost = 1 + self.action_cost[i]
+        self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]  
         self.q_table = {}
         self.canvas = None
         self.root = None
@@ -55,7 +56,7 @@ class TabQAgent:
         # retrieve the old action value from the Q-table (indexed by the previous state and the previous action)
         old_q = self.q_table[self.prev_s][self.prev_a]
         
-        # TODO: what should the new action value be?
+        # Calculate new action value
         new_q = ( old_q + self.alpha * (reward + self.gamma * max(self.q_table[current_state]) - old_q) )
         
         # assign the new action value to the Q-table
@@ -67,7 +68,7 @@ class TabQAgent:
         # retrieve the old action value from the Q-table (indexed by the previous state and the previous action)
         old_q = self.q_table[self.prev_s][self.prev_a]
         
-        # TODO: what should the new action value be?
+        # Calculate new action value
         new_q = ( old_q + self.alpha * ( reward - old_q ) )
         
         # assign the new action value to the Q-table
@@ -84,13 +85,15 @@ class TabQAgent:
             return 0
         current_s = "%d:%d" % (int(obs[u'XPos']), int(obs[u'ZPos']))
         self.logger.debug("State: %s (x = %.2f, z = %.2f)" % (current_s, float(obs[u'XPos']), float(obs[u'ZPos'])))
+        
+        # Set initial q-values for actions in new state 
+        # ("move" actions initial values are 0 while "jump" actions initial values are -2)
         if not self.q_table.has_key(current_s):
             self.q_table[current_s] = [0, 0, 0, 0, -2, -2, -2, -2]
         
         # update Q values
         if self.prev_s is not None and self.prev_a is not None:
             self.updateQTable( current_r, current_s )
-        
         
         # select the next action
         rnd = random.random()
@@ -134,6 +137,7 @@ class TabQAgent:
         world_state = agent_host.getWorldState()
         while world_state.is_mission_running:
             
+            # Subtract the cost of the previous action from the current reward value
             current_r = 0 - cost
             
             if is_first_action:
