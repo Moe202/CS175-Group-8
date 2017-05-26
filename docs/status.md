@@ -43,12 +43,12 @@ self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
 ## The 3 Levels
 <img src="images/grid.jpeg" title="grid" />
 
-### Level 1:
-The level 1 map is a flat terrain with lava on eages. It is a 7x7x1(LxWxH) grid. The agent start at the lapis_block and try to reach the redstone_block. The agent can either walk or jump.<br>
-### Level 2:
-The level 1 map is built basing on Level 1 map. 5 cobble stone blocks in the middle of map were replaced by 5 lava blocks.It is a 7x7x1(LxWxH) grid. The agent start at the lapis_block and try to reach the redstone_block. The agent can either walk or jump.<br> 
-### Level 3:
-Level 3 map was built basing on level 2 map. A  2x2x2(LxWxH) glass block and a 2x2x1(LxWxH) cobble stone hill. Agent can jump over the cobble stone block(gold) but cannot jump over the glass block. The agent start at the lapis_block and try to reach the redstone_block. The agent can either walk or jump.<br> 
+#### Level 1:
+The level 1 map is a flat terrain with lava on eages. It is a 7x7x1(LxWxH) grid. The agent start at the lapis_block and try to reach the redstone_block. The agent can either walk or jump.
+#### Level 2:
+The level 1 map is built basing on Level 1 map. 5 cobble stone blocks in the middle of map were replaced by 5 lava blocks.It is a 7x7x1(LxWxH) grid. The agent start at the lapis_block and try to reach the redstone_block. The agent can either walk or jump.
+#### Level 3:
+Level 3 map was built basing on level 2 map. A  2x2x2(LxWxH) glass block and a 2x2x1(LxWxH) cobble stone hill. Agent can jump over the cobble stone block(gold) but cannot jump over the glass block. The agent start at the lapis_block and try to reach the redstone_block. The agent can either walk or jump. 
 
 For each action the agent makes, there is a reward value of -1 for each move, -10 for each jump, -100 for reaching the lava block, +100 for reaching the redstone_block(goal state)
 
