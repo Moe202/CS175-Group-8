@@ -43,20 +43,10 @@ self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
 **Max Q Value:** The action has the highest utility value in next state will become the new Q value of that states<br>
 
 ### The 3 Levels
-<<<<<<< HEAD
+
 <img src="images/grid.jpeg" title="grid" width="1252" height="494" />
 The  Figure shows the grid layout in two-dimensional. It specify the start and end blocks. Also，it shows the terrian of mazes(the floor of the maze is cobblestone, block is built by glass\_blocks, hill is built by cobblestone\_blocks). The number in each grid represent the **(x,z)** value and each grids has an altitude value which is  **y**. 
-=======
-<img src="images/grid.jpeg" title="grid" />
 
-<img src="images/level1_graph.png" title="lvl1" />
-<img src="images/level2_graph.png" title="lvl2" />
-<img src="images/level3_graph.png" title="lvl3" />
-
-
-
-The  Figure shows the grid layout in two-dimensional. It specify the start and end blocks. Also，it shows the terrian of mazes(the floor of the maze is cobblestone, block is built by glass\_blocks, hill is built by cobblestone\_blocks). The number in each grid represent the **(x,z)** value and each grids has an altitude value which is  **y**.
->>>>>>> fa21f4ecd73dfe7cf32469e8a908bf064f5626be
 
 #### Level 1:
 The level 1 map is a flat terrain with lava on eages. It is a 7x7x1(LxWxH) grid. The agent start at the lapis\_block and try to reach the redstone\_block. The agent can either walk or jump. In level 1, there are () states and 2 actions
@@ -76,7 +66,8 @@ For each action the agent makes, there is a reward value of -1 for each move, -1
 
 
 # Evaluation
-For qualitative evaluation, we evaluate the project by checking how well the agent can solve the all 3 level mazes. We observe the agent when it is solving the maze to verify it works correctly. Also, we can check our agent by using the Cumulative Rewards table
+For qualitative evaluation, we evaluate the project by checking how well the agent can solve the all 3 level mazes. We observe the agent when it is solving the maze to verify it works correctly. Also, we can check our agent by using the Cumulative Rewards Table.
+For example: one of the optimal path of level 1 is (1,1) move-> (1,2) move-> (1,3) move-> (1,4) move-> (1,5) move-> (1,6) move-> (2,6) move-> (3,6) move-> (4,6) move-> (5,6) move-> (6,6). It takes 10 moves. Therefore, the best reward we can get is 90. The Cumulative Rewards Table shows how the agent finds the solution with the highest reward. 
 
 # Remaining Goals and Challenges
 
