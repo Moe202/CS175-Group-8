@@ -68,11 +68,15 @@ For each action the agent makes, there is a reward value of -1 for each move, -1
 # Evaluation
 For **qualitative evaluation**, we evaluate our project by checking how well the agent can solve the all 3 level mazes. We observe the agent when it is solving the maze to verify it works correctly. Also, we can check our agent by using the Cumulative Rewards Table.<br>
 **Level1:** one of the optimal path of level 1 is (1,1) move-> (1,2) move-> (1,3) move-> (1,4) move-> (1,5) move-> (1,6) move-> (2,6) move-> (3,6) move-> (4,6) move-> (5,6) move-> (6,6). It takes 10 moves. Therefore, the best reward we can get is 90. The Cumulative Rewards Table shows how the agent finds the solution with the highest reward. 
-<img src="images/crt1.jpeg" title="Cumulative Rewards Table lvl 1" width="528" height="162.4" />
+<img src="images/crt1.jpeg" title="Cumulative Rewards Table lvl 1" width="528" height="162.4" /><br>
 **Level2:** one of the optimal path of level 2 is 
 **Level3:** one of the optimal path of level 3 is 
 <br>
 In terms of **quantitative evaluation**, we evaluate our project by checking how long it takes the agent to solve each mazes. That is, we want the agent to slove the maze as quick as it can. We use the Cumulative Rewards Table to check how many runs it takes before getting the best reward.
+| Tables        |    level 1    |    level 1     |    level 1    | 
+| ------------- |:-------------:| :-------------:|:-------------:|
+| # of runs     |               |                |               |
+
 
 
 # Remaining Goals and Challenges
