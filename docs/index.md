@@ -26,3 +26,12 @@ Level 5: Moonshot case- 3D terrain, hills, hazards, blocks, timed jumps, and zom
 Inspiration: https://www.youtube.com/watch?v=9XRL6d-yxp4
 <iframe src="https://www.youtube.com/watch?v=9XRL6d-yxp4"
  width="560" height="315" frameborder="0" allowfullscreen></iframe>
+
+
+
+ # Proposal
+ <a href="https://moe202.github.io/Reward-Finder/proposal.html"> Link </a>
+
+
+ # Project Status
+ <a href="https://moe202.github.io/Reward-Finder/status.html"> Link </a>
