@@ -37,7 +37,7 @@ self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
 
  $$Q(S_t,a_t) \leftarrow Q(S_t,a_t) + \alpha[r_{t+1} + \gamma \cdot \max_a Q(S_{t+1},a_t)  -  Q(S_t,a_t)]$$
 
- $Q(S_t,a_t) \leftarrow Q(S_t,a_t) + \alpha[r_{t+1} + \gamma \cdot \max_a Q(S_{t+1},a_t)  -  Q(S_t,a_t)]$
+ $ Q(S_t,a_t) \leftarrow Q(S_t,a_t) + \alpha[r_{t+1} + \gamma \cdot \max_a Q(S_{t+1},a_t)  -  Q(S_t,a_t)] \$
 
 
 
