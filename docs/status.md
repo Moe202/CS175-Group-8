@@ -8,11 +8,11 @@ title: Status
 # Project Summary
 &nbsp;&nbsp;&nbsp;&nbsp; Solve an intricate maze with traps, lava, etc. Optimize by trying to improve the time the agent solves the maze or by finding the most optimal path. The input of the project would require a section of the map the agent would traverse. Output would be the most optimal path discovered by the agent. Lastly, we assume that every block is unknown and the agent must discover each path. Direct applications of this project would allow users to optimally beat multiple video games. At a high level, reinforcement learning discovered from this project can determine the ideal behavior within the manufacturing, delivery, and finance industries.
 
-Level 1: Flat terrain, with edge boundary  (Action: Walk, Jump)<br>
-Level 2: Flat terrain, with edge boundary and hazards in the middle of the map  (Action: Walk, Jump)<br>
-Level 3: 3D terrain, hills, hazards, blocks  (Action: Walk, Jump)<br>
-Level 4: 3D terrain, hills, hazards, blocks  (Action: Walk, Jump, Timed Jump)<br>
-Level 5: Moonshot case- 3D terrain, hills, hazards, blocks and zombies  (Action: Walk, Jump, Timed Jump)<br>
+Level 1: Flat terrain, with edge boundary  (Actions: Walk, Jump)<br>
+Level 2: Flat terrain, with edge boundary and hazards in the middle of the map  (Actions: Walk, Jump)<br>
+Level 3: 3D terrain, hills, hazards, blocks  (Actions: Walk, Jump)<br>
+Level 4: 3D terrain, hills, hazards, blocks  (Actions: Walk, Jump, Timed Jump)<br>
+Level 5: Moonshot case- 3D terrain, hills, hazards, blocks and zombies  (Actions: Walk, Jump, Timed Jump)<br>
 
 <img src="images/level1.jpeg" title="level 1 map" width="280" height="280" /> <img src="images/level2.jpeg" title="level 2 map" width="280" height="280" /> <img src="images/level3.jpeg" title="level 3 map" width="280" height="280" />
 
@@ -41,7 +41,7 @@ self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
 **Max Q Value:** The action has the highest utility value in next state will become the new Q value of that states<br>
 
 ### The 3 Levels
-<img src="images/grid.jpeg" title="grid" />
+<img src="images/grid.jpeg" title="grid" width="1252" height="494" />
 The  Figure shows the grid layout in two-dimensional. It specify the start and end blocks. Also，it shows the terrian of mazes(the floor of the maze is cobblestone, block is built by glass\_blocks, hill is built by cobblestone\_blocks). The number in each grid represent the **(x,z)** value and each grids has an altitude value which is  **y**. 
 
 #### Level 1:
@@ -62,7 +62,7 @@ For each action the agent makes, there is a reward value of -1 for each move, -1
 
 
 # Evaluation
-
+For qualitative evaluation, we evaluate the project by checking how well the agent can solve the all 3 level mazes. We observe the agent when it is solving the maze to verify it works correctly. Also, we can check our agent by using the Cumulative Rewards table
 
 # Remaining Goals and Challenges
 
