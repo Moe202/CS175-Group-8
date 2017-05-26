@@ -8,11 +8,11 @@ title: Status
 # Project Summary
 &nbsp;&nbsp;&nbsp;&nbsp; Solve an intricate maze with traps, lava, etc. Optimize by trying to improve the time the agent solves the maze or by finding the most optimal path. The input of the project would require a section of the map the agent would traverse. Output would be the most optimal path discovered by the agent. Lastly, we assume that every block is unknown and the agent must discover each path. Direct applications of this project would allow users to optimally beat multiple video games. At a high level, reinforcement learning discovered from this project can determine the ideal behavior within the manufacturing, delivery, and finance industries.
 
-Level 1: Flat terrain, with edge boundary  
-Level 2: Flat terrain, with edge boundary and hazards in the middle of the map  
-Level 3: 3D terrain, hills, hazards, blocks  
-Level 4: 3D terrain, hills, hazards, blocks, and timed jumps  
-Level 5: Moonshot case- 3D terrain, hills, hazards, blocks, timed jumps, and zombies  
+Level 1: Flat terrain, with edge boundary  (Action: Walk, Jump)
+Level 2: Flat terrain, with edge boundary and hazards in the middle of the map  (Action: Walk, Jump)
+Level 3: 3D terrain, hills, hazards, blocks  (Action: Walk, Jump)
+Level 4: 3D terrain, hills, hazards, blocks  (Action: Walk, Jump, Timed Jump)
+Level 5: Moonshot case- 3D terrain, hills, hazards, blocks and zombies  (Action: Walk, Jump, Timed Jump)
 
 <img src="images/level1.jpeg" title="level 1 map" width="280" height="280" /> <img src="images/level2.jpeg" title="level 2 map" width="280" height="280" /> <img src="images/level3.jpeg" title="level 3 map" width="280" height="280" />
 
@@ -32,8 +32,17 @@ self.actions = ["movewest 1", "moveeast 1", "movenorth 1", "movesouth 1", "jumpn
                         "jumpsouth 1", "jumpwest 1", "jumpeast 1"]
 self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
 ```
-**Learning Rate:** Alpha represents the learning rate. It is value between 0 and 1 ( 0 < a < 1). It indicates how much the utility values will be updated every time the agent takes an action. alpha = 0 means the agent will not learn anything. alpha = 1 means the agent will not consider any feature states (the agent only consider most recent information). In stochastic environment, alpha is preferable closer to 0 than 1. In our approach, we decide alpha value to be 0.1
-**Discount Factor:** Gamma is the discount factor. It determines the importance of future information.  Gamma closer to 0 will encourages the agent to seek out rewards sooner rather than later. It makes the agent assign a smaller reward to the feature action. Gamma closer to 1 will makes the agent seek for high reward in the feature. This value usually closer to 1. We set gamma value to 1 in our approach
+**Learning Rate:** Alpha represents the learning rate. It is value between 0 and 1 ( 0 < a < 1). It indicates how much the utility values will be updated every time the agent takes an action. alpha = 0 means the agent will not learn anything. alpha = 1 means the agent will not consider any feature states (the agent only consider most recent information). In stochastic environment, alpha is preferable closer to 0 than 1. In our approach, we decide alpha value to be 0.1<br>
+**Discount Factor:** Gamma is the discount factor. It determines the importance of future information.  Gamma closer to 0 will encourages the agent to seek out rewards sooner rather than later. It makes the agent assign a smaller reward to the feature action. Gamma closer to 1 will makes the agent seek for high reward in the feature. This value usually closer to 1. We set gamma value to 1 in our approach<br>
+**Random Action:** Epsilon is the possibility of taking a random action instead of the best one. (needs more here)<br>
+**Immediate Reward Valuer:** r is the immediate reward value (needs more/ do we need it?)<br>
+**Max Q Value:** The action has the highest utility value in next state will become the new Q value of that states<br>
+
+**Action: Move** The reward value for MOVE 1 block/grid is 1<br>
+**Action: Jump** The reward value for JUMP is 10<br>
+
+
+
 
 
 
