@@ -44,6 +44,13 @@ self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
 
 ### The 3 Levels
 <img src="images/grid.jpeg" title="grid" />
+
+<img src="images/level1_graph.png" title="lvl1" />
+<img src="images/level2_graph.png" title="lvl2" />
+<img src="images/level3_graph.png" title="lvl3" />
+
+
+
 The  Figure shows the grid layout in two-dimensional. It specify the start and end blocks. Also，it shows the terrian of mazes(the floor of the maze is cobblestone, block is built by glass\_blocks, hill is built by cobblestone\_blocks). The number in each grid represent the **(x,z)** value and each grids has an altitude value which is  **y**.
 
 #### Level 1:
