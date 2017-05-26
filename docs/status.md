@@ -27,9 +27,7 @@ self.gamma = 1.0 # discount rate
         
 # Set of actions
 self.actions = ["movewest 1", "moveeast 1", "movenorth 1", "movesouth 1", "jumpnorth 1", \
-		      "jumpsouth 1", "jumpwest 1", "jumpeast 1"]
-# Additional action costs to take into account (Each action costs 1 by default). 
-# Action cost = 1 + self.action_cost[i]
+		                "jumpsouth 1", "jumpwest 1", "jumpeast 1"]
 self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
 ```
 
@@ -37,7 +35,7 @@ self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
 	Q(S_t,a_t) \leftarrow Q(S_t,a_t) + \alpha[r_{t+1} + \gamma \cdot \max_a Q(S_{t+1},a_t)  -  Q(S_t,a_t)]
  {% endraw %}
 
- $$ Q(S_t,a_t) \leftarrow Q(S_t,a_t) + \alpha[r_{t+1} + \gamma \cdot \max_a Q(S_{t+1},a_t)  -  Q(S_t,a_t)] $$
+ $$Q(S_t,a_t) \leftarrow Q(S_t,a_t) + \alpha[r_{t+1} + \gamma \cdot \max_a Q(S_{t+1},a_t)  -  Q(S_t,a_t)]$$
 
 
 
