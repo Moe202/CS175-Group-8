@@ -31,7 +31,8 @@ self.actions = ["movewest 1", "moveeast 1", "movenorth 1", "movesouth 1", "jumpn
 self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
 ```
 
-![]()
+![][1]([https://github.com/Moe202/Reward-Finder/blob/master/docs/images/eq.gif][2])
+\<img src="images/eq.gif” title=“equation” /\>
  {% raw %}
 	Q(S_t,a_t) \leftarrow Q(S_t,a_t) + \alpha[r_{t+1} + \gamma \cdot \max_a Q(S_{t+1},a_t)  -  Q(S_t,a_t)]
  {% endraw %}
@@ -47,3 +48,5 @@ self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
 
 # Remaining Goals and Challenges
 
+[1]:	https://github.com/Moe202/Reward-Finder/blob/master/docs/images/eq.gif
+[2]:	https://github.com/Moe202/Reward-Finder/blob/master/docs/images/eq.gif
