@@ -40,16 +40,17 @@ self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
 **Immediate Reward Valuer:** r is the immediate reward value (needs more/ do we need it?)<br>
 **Max Q Value:** The action has the highest utility value in next state will become the new Q value of that states<br>
 
-## The 3 Levels
+### The 3 Levels
 <img src="images/grid.jpeg" title="grid" />
+The  Figure shows the grid layout in two-dimensional. It specify the start and end blocks. Also，it shows the terrian of mazes(the floor of the maze is cobblestone, block is built by glass_blocks, hill is built by cobblestone_blocks). The number in each grid represent the **(x,z)** value and each grids has an altitude value which is **y**. 
 
 #### Level 1:
-The level 1 map is a flat terrain with lava on eages. It is a 7x7x1(LxWxH) grid. The agent start at the lapis_block and try to reach the redstone_block. The agent can either walk or jump.
+The level 1 map is a flat terrain with lava on eages. It is a 7x7x1(LxWxH) grid. The agent start at the lapis_block and try to reach the redstone_block. The agent can either walk or jump. In level 1, there are () states and 2 actions
 #### Level 2:
-The level 1 map is built basing on Level 1 map. 5 cobble stone blocks in the middle of map were replaced by 5 lava blocks.It is a 7x7x1(LxWxH) grid. The agent start at the lapis_block and try to reach the redstone_block. The agent can either walk or jump.
+The level 1 map is built basing on Level 1 map. 5 cobble stone blocks in the middle of map were replaced by 5 lava blocks.It is a 7x7x1(LxWxH) grid. The agent start at the lapis_block and try to reach the redstone_block. The agent can either walk or jump. In level 2, there are () states and 2 actions
 #### Level 3:
-Level 3 map was built basing on level 2 map. A  2x2x2(LxWxH) glass block and a 2x2x1(LxWxH) cobble stone hill. Agent can jump over the cobble stone block(gold) but cannot jump over the glass block. The agent start at the lapis_block and try to reach the redstone_block. The agent can either walk or jump. 
-
+Level 3 map was built basing on level 2 map. A  2x2x2(LxWxH) glass block and a 2x2x1(LxWxH) cobble stone hill. Agent can jump over the cobble stone block(gold) but cannot jump over the glass block. The agent start at the lapis_block and try to reach the redstone_block. The agent can either walk or jump. In level 1, there are () states and 2 actions
+#### Reward for each actions
 For each action the agent makes, there is a reward value of -1 for each move, -10 for each jump, -100 for reaching the lava block, +100 for reaching the redstone_block(goal state)
 
 
