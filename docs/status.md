@@ -67,22 +67,29 @@ For each action the agent makes, there is a reward value of -1 for each move, -1
 
 # Evaluation
 For **qualitative evaluation**, we evaluate our project by checking how well the agent can solve the all 3 level mazes. We observe the agent when it is solving the maze to verify it works correctly. Also, we can check our agent by using the Cumulative Rewards Table.<br>
-**Level1:** one of the optimal path of level 1 is *(1,1) move-> (1,2) move-> (1,3) move-> (1,4) move-> (1,5) move-> (1,6) move-> (2,6) move-> (3,6) move-> (4,6) move-> (5,6) move-> (6,6)*. It takes 10 moves. Therefore, the best reward we can get is 90. The Cumulative Rewards Table shows how the agent successfully finds the solution with the highest reward. 
-<img src="images/crt1.jpeg" title="Cumulative Rewards Table lvl 1" width="528" height="162.4" /><br>
+
+**Level1:** one of the optimal path of level 1 is *(1,1) move-> (1,2) move-> (1,3) move-> (1,4) move-> (1,5) move-> (1,6) move-> (2,6) move-> (3,6) move-> (4,6) move-> (5,6) move-> (6,6)*. It takes 10 moves. Therefore, the best reward we can get is 90. The Cumulative Rewards Table shows how the agent successfully finds the solution with the highest reward.
+
+<img src="images/crt1.jpeg" title="Cumulative Rewards Table lvl 1" width="528" height="162.4" align="middle" /><br>
+
 **Level2:** one of the optimal path of level 2 is *(1,1) move-> (2,1) move-> (2,2) move-> (2,3) move-> (3,3) move-> (4,3) move-> (5,3) move-> (5,4) move-> (5,5) move-> (5,6) move-> (6,6)*. It also takes 10 moves. Therefore, the best reward we can get is 90. Here is the Cumulative Rewards Table of level 2. The agent successfully finds the solution with the highest reward in level 2.
-<img src="images/crt2.jpeg" title="Cumulative Rewards Table lvl 2" width="528" height="162.4" /><br>
+
+<img src="images/crt2.jpeg" title="Cumulative Rewards Table lvl 2" width="528" height="162.4" align="middle" /><br>
+
 **Level3:** one of the optimal path of level 3 is *(1,1) move-> (2,1) move-> (2,2) move-> (2,3) move-> (3,3) moves-> (3,4) jump-> (4,4) move-> (5,4) move-> (6,4) move-> (6,5) move-> (6,6)*. It takes 10 moves. However, from (3,4) to (4,4) the agent takes the action "JUMP" witch takes 10 rewards. Therefore, the best reward is 100 - 10 - 9 = 81. Here is the Cumulative Rewards Table of level 3. The agent successfully finds the solution with the highest reward in level 3.
-<img src="images/crt3.jpeg" title="Cumulative Rewards Table lvl 3" width="528" height="162.4" /><br>
+
+<img src="images/crt3.jpeg" title="Cumulative Rewards Table lvl 3" width="528" height="162.4" align="middle"/><br>
+
 <br>
 In terms of **quantitative evaluation**, we evaluate our project by checking how long it takes the agent to solve each mazes. That is, we want the agent to slove the maze as quick as it can. We use the Cumulative Rewards Table to check how many runs it takes before getting the best reward.<br>
-| Tables        |    level 1    |    level 2     |    level 3    | 
+| Tables        |    level 1    |    level 2     |    level 3    |
 | ------------- |:-------------:| :-------------:|:-------------:|
 | # of runs     |    44         |                |               |
 
 
 
 # Remaining Goals and Challenges
-For the rest of weeks, we will add an “timed jump” which means the agent can either jump 1 blocks or 2-3 blocks. That is our level 4. It is interesting to discover how will the agent perform when we add more uncertainty into the map and how we can improve its performance by using different parameters set-up. 
+For the rest of weeks, we will add an “timed jump” which means the agent can either jump 1 blocks or 2-3 blocks. That is our level 4. It is interesting to discover how will the agent perform when we add more uncertainty into the map and how we can improve its performance by using different parameters set-up.
 Also, we will add zombies on patrol which is level 5. This will add more actions to our project. ( describe how you consider your prototype to be limited, ) (iven your experience so far, describe some of the challenges you anticipate facing by the time your final report is due, how crippling you think it might be, and what you might do to solve them.)
 
 
