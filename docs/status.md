@@ -41,7 +41,7 @@ self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
 **Max Q Value:** The action has the highest utility value in next state will become the new Q value of that states<br>
 
 ### The 3 Levels
-<img src="images/grid.jpeg" title="grid" width="280" height="280" />
+<img src="images/grid.jpeg" title="grid" />
 #### Level 1:
 The agent start at the lapis_block and try to reach the redstone_block. The agent can either walk or jump. 
 For each action the agent makes, there is a reward value of -1 for each move, -10 for each jump, -100 for reaching the lava block, +100 for reaching the redstone_block(goal state)
