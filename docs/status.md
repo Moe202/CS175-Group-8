@@ -6,7 +6,7 @@ title: Status
 
 
 # Project Summary
-&nbsp;&nbsp;&nbsp;&nbsp; Solve an intricate maze with traps, lava, etc. Optimize by trying to improve the time the agent solves the maze or by finding the most optimal path. The input of the project would require a section of the map the agent would traverse. Output would be the most optimal path discovered by the agent. Lastly, we assume that every block is unknown and the agent must discover each path. Direct applications of this project would allow users to optimally beat multiple video games. At a high level, reinforcement learning discovered from this project can determine the ideal behavior within the manufacturing, delivery, and finance industries.
+Solve an intricate maze with traps, lava, etc. Optimize by trying to improve the time the agent solves the maze or by finding the most optimal path. The input of the project would require a section of the map the agent would traverse. Output would be the most optimal path discovered by the agent. Lastly, we assume that every block is unknown and the agent must discover each path. Direct applications of this project would allow users to optimally beat multiple video games. At a high level, reinforcement learning discovered from this project can determine the ideal behavior within the manufacturing, delivery, and finance industries.
 
 Level 1: Flat terrain, with edge boundary  (Actions: Walk, Jump)<br>
 Level 2: Flat terrain, with edge boundary and hazards in the middle of the map  (Actions: Walk, Jump)<br>
@@ -66,7 +66,6 @@ For each action the agent makes, there is a reward value of -1 for each move, -1
 
 
 # Evaluation
-<<<<<<< HEAD
 For **qualitative evaluation**, we evaluate our project by checking how well the agent can solve the all 3 level mazes. We observe the agent when it is solving the maze to verify it works correctly. Also, we can check our agent by using the Cumulative Rewards Table.<br>
 **Level1:** one of the optimal path of level 1 is (1,1) move-> (1,2) move-> (1,3) move-> (1,4) move-> (1,5) move-> (1,6) move-> (2,6) move-> (3,6) move-> (4,6) move-> (5,6) move-> (6,6). It takes 10 moves. Therefore, the best reward we can get is 90. The Cumulative Rewards Table shows how the agent finds the solution with the highest reward. 
 <img src="images/crt1.jpeg" title="Cumulative Rewards Table lvl 1"/>
@@ -74,10 +73,7 @@ For **qualitative evaluation**, we evaluate our project by checking how well the
 **Level3:** one of the optimal path of level 3 is 
 <br>
 In terms of **quantitative evaluation**, we evaluate our project by checking how long it takes the agent to solve each mazes. That is, we want the agent to slove the maze as quick as it can. We use the Cumulative Rewards Table to check how many runs it takes before getting the best reward.
-=======
-For qualitative evaluation, we evaluate the project by checking how well the agent can solve the all 3 level mazes. We observe the agent when it is solving the maze to verify it works correctly. Also, we can check our agent by using the Cumulative Rewards Table.
-For example: one of the optimal path of level 1 is (1,1) move-> (1,2) move-> (1,3) move-> (1,4) move-> (1,5) move-> (1,6) move-> (2,6) move-> (3,6) move-> (4,6) move-> (5,6) move-> (6,6). It takes 10 moves. Therefore, the best reward we can get is 90. The Cumulative Rewards Table shows how the agent finds the solution with the highest reward.
->>>>>>> b308087523fd04e6402b0257ef3b8fbf84c452fd
+
 
 # Remaining Goals and Challenges
 For the rest of weeks, we will add an “timed jump” which means the agent can either jump 1 blocks or 2-3 blocks. That is our level 4. It is interesting to discover how will the agent perform when we add more uncertainty into the map and how we can improve its performance by using different parameters set-up. 
