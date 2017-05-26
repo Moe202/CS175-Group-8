@@ -13,7 +13,7 @@ title: Status
 
 # Approach
 ![][1]
-\<img src="https://github.com/favicon.ico" height="24" width="48”\>
+\<img src="https://github.com/favicon.ico" height="24" width="48” /\>
 # Evaluation
 
 
