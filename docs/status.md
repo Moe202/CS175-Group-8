@@ -86,7 +86,7 @@ In terms of **quantitative evaluation**, we evaluate our project by checking how
 ```
 | Tables        |    level 1    |    level 2     |    level 3    |
 | ------------- |:-------------:| :-------------:|:-------------:|
-| # of runs     |    44         |                |               |
+| # of runs     |      44       |       56       |      104      |
 ```
 
 
