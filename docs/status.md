@@ -82,15 +82,17 @@ For **qualitative evaluation**, we evaluate our project by checking how well the
 
 <br>
 In terms of **quantitative evaluation**, we evaluate our project by checking how long it takes the agent to solve each mazes. That is, we want the agent to slove the maze as quick as it can. We use the Cumulative Rewards Table to check how many runs it takes before getting the best reward.<br>
+
+'''
 | Tables        |    level 1    |    level 2     |    level 3    |
 | ------------- |:-------------:| :-------------:|:-------------:|
 | # of runs     |    44         |                |               |
-
+'''
 
 
 # Remaining Goals and Challenges
-For the rest of weeks, we will add an “timed jump” which means the agent can either jump 1 blocks or 2-3 blocks. That is our level 4. It is interesting to discover how will the agent perform when we add more uncertainty into the map and how we can improve its performance by using different parameters set-up.
-Also, we will add zombies on patrol which is level 5. This will add more actions to our project. ( describe how you consider your prototype to be limited, ) (iven your experience so far, describe some of the challenges you anticipate facing by the time your final report is due, how crippling you think it might be, and what you might do to solve them.)
+For the rest of weeks, we will add a “timed jump” which means the agent can either jump 1 blocks or 2-3 blocks. That is our level 4. It will be interesting to discover how the agent will perform when we add more uncertainty into the map and how we can improve its performance by adjusting our parameter values(reward values, learning rate, discount rate, etc.). Moreover, we plan to add nondeterministic actions into our project. For example, the agent may have a 20% probability of jumping left as opposed to walking left, obviously with different discount factors for each action.
+Also, by level 5, our moonshot case, we will add zombies that will patrol the map and force the agent to perform avoidance. This will add more actions to our project. Given our experience so far, so challenges we will face are implementing more actions into our project and performing zombie avoidance. We plan to adjust our reward values accordingly and improve upon our Q-Learning algorithm. If the project proceeds as planned our team should be able to solve a level 5 map on a moderate to large scale.
 
 
 
