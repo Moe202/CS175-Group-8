@@ -22,12 +22,14 @@ Level 5: Moonshot case- 3D terrain, hills, hazards, blocks and zombies  (Actions
 
 For progress report, our approach used the Q-Learning algorithm. Here is the equation of Q-Learning algorithm and our parameter set-up.<br>
 The Q-Learning equation:<br>
- ![][image-1]
+
+<img src="images/eq.gif" title="equation" />
+
 ```python
 self.epsilon = 0.01 # chance of taking a random action instead of the best
 self.alpha = 0.1 # learning rate
 self.gamma = 1.0 # discount rate
-        
+
 # Set of actions
 self.actions = ["movewest 1", "moveeast 1", "movenorth 1", "movesouth 1", "jumpnorth 1", \
                         "jumpsouth 1", "jumpwest 1", "jumpeast 1"]
@@ -41,8 +43,13 @@ self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
 **Max Q Value:** The action has the highest utility value in next state will become the new Q value of that states<br>
 
 ### The 3 Levels
+<<<<<<< HEAD
 <img src="images/grid.jpeg" title="grid" width="1252" height="494" />
 The  Figure shows the grid layout in two-dimensional. It specify the start and end blocks. Also，it shows the terrian of mazes(the floor of the maze is cobblestone, block is built by glass\_blocks, hill is built by cobblestone\_blocks). The number in each grid represent the **(x,z)** value and each grids has an altitude value which is  **y**. 
+=======
+<img src="images/grid.jpeg" title="grid" />
+The  Figure shows the grid layout in two-dimensional. It specify the start and end blocks. Also，it shows the terrian of mazes(the floor of the maze is cobblestone, block is built by glass\_blocks, hill is built by cobblestone\_blocks). The number in each grid represent the **(x,z)** value and each grids has an altitude value which is  **y**.
+>>>>>>> fa21f4ecd73dfe7cf32469e8a908bf064f5626be
 
 #### Level 1:
 The level 1 map is a flat terrain with lava on eages. It is a 7x7x1(LxWxH) grid. The agent start at the lapis\_block and try to reach the redstone\_block. The agent can either walk or jump. In level 1, there are () states and 2 actions
