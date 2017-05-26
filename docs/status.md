@@ -11,8 +11,8 @@ title: Status
 Level 1: Flat terrain, with edge boundary   
 Level 2: Flat terrain, with edge boundary and hazards in the middle of the map  
 Level 3: 3D terrain, hills, hazards, blocks  
-Level 4: 3D terrain, hills, hazards, blocks, and timed jumps  
-Level 5: Moonshot case- 3D terrain, hills, hazards, blocks, timed jumps, and zombies    
+Level 4: 3D terrain, hills, hazards, blocks, and uncertain jumps  
+Level 5: Moonshot case- 3D terrain, hills, hazards, blocks, uncertain jumps, and zombies    
 
 <img src="images/level1.jpeg" title="level 1 map" width="280" height="280" /> <img src="images/level2.jpeg" title="level 2 map" width="280" height="280" /> <img src="images/level3.jpeg" title="level 3 map" width="280" height="280" />
 
