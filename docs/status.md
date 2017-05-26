@@ -12,8 +12,7 @@ title: Status
 
 
 # Approach
-![][1]
-<img src="https://avatars2.githubusercontent.com/u/3265208?v=3&s=100" alt="GitHub" title="GitHub,Social Coding" width="50" height="50" />
+<img src="https://github.com/Moe202/Reward-Finder/blob/master/images/level1.jpeg" alt="GitHub" title="level 1 map" width="400" height="400" />
 # Evaluation
 
 
