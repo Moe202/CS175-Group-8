@@ -22,7 +22,7 @@ Level 5: Moonshot case- 3D terrain, hills, hazards, blocks and zombies  (Action:
 
 For progress report, our approach used the Q-Learning algorithm. Here is the equation of Q-Learning algorithm and our parameter set-up.<br>
 The Q-Learning equation:<br>
- ![][1]
+ ![][image-1]
 ```python
 self.epsilon = 0.01 # chance of taking a random action instead of the best
 self.alpha = 0.1 # learning rate
@@ -34,7 +34,7 @@ self.actions = ["movewest 1", "moveeast 1", "movenorth 1", "movesouth 1", "jumpn
 Action cost = 1 + self.action_cost[i]
 self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
 ```
-**Learning Rate:** Alpha represents the learning rate. It is value between 0 and 1 ( 0 < a < 1). It indicates how much the utility values will be updated every time the agent takes an action. alpha = 0 means the agent will not learn anything. alpha = 1 means the agent will not consider any feature states (the agent only consider most recent information). In stochastic environment, alpha is preferable closer to 0 than 1. In our approach, we decide alpha value to be 0.1<br><br>
+**Learning Rate:** Alpha represents the learning rate. It is value between 0 and 1 ( 0 \< a \< 1). It indicates how much the utility values will be updated every time the agent takes an action. alpha = 0 means the agent will not learn anything. alpha = 1 means the agent will not consider any feature states (the agent only consider most recent information). In stochastic environment, alpha is preferable closer to 0 than 1. In our approach, we decide alpha value to be 0.1<br><br>
 **Discount Factor:** Gamma is the discount factor. It determines the importance of future information.  Gamma closer to 0 will encourages the agent to seek out rewards sooner rather than later. It makes the agent assign a smaller reward to the feature action. Gamma closer to 1 will makes the agent seek for high reward in the feature. This value usually closer to 1. We set gamma value to 1 in our approach<br><br>
 **Random Action:** Epsilon is the possibility of taking a random action instead of the best one. (needs more here)<br>
 **Immediate Reward Valuer:** r is the immediate reward value (needs more/ do we need it?)<br>
@@ -42,16 +42,16 @@ self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
 
 ### The 3 Levels
 <img src="images/grid.jpeg" title="grid" />
-The  Figure shows the grid layout in two-dimensional. It specify the start and end blocks. Also，it shows the terrian of mazes(the floor of the maze is cobblestone, block is built by glass_blocks, hill is built by cobblestone_blocks). The number in each grid represent the __(x,z)__ value and each grids has an altitude value which is __y__. 
+The  Figure shows the grid layout in two-dimensional. It specify the start and end blocks. Also，it shows the terrian of mazes(the floor of the maze is cobblestone, block is built by glass\_blocks, hill is built by cobblestone\_blocks). The number in each grid represent the **(x,z)** value and each grids has an altitude value which is  **y**. 
 
 #### Level 1:
-The level 1 map is a flat terrain with lava on eages. It is a 7x7x1(LxWxH) grid. The agent start at the lapis_block and try to reach the redstone_block. The agent can either walk or jump. In level 1, there are () states and 2 actions
+The level 1 map is a flat terrain with lava on eages. It is a 7x7x1(LxWxH) grid. The agent start at the lapis\_block and try to reach the redstone\_block. The agent can either walk or jump. In level 1, there are () states and 2 actions
 #### Level 2:
-The level 1 map is built basing on Level 1 map. 5 cobble stone blocks in the middle of map were replaced by 5 lava blocks.It is a 7x7x1(LxWxH) grid. The agent start at the lapis_block and try to reach the redstone_block. The agent can either walk or jump. In level 2, there are () states and 2 actions
+The level 1 map is built basing on Level 1 map. 5 cobble stone blocks in the middle of map were replaced by 5 lava blocks.It is a 7x7x1(LxWxH) grid. The agent start at the lapis\_block and try to reach the redstone\_block. The agent can either walk or jump. In level 2, there are () states and 2 actions
 #### Level 3:
-Level 3 map was built basing on level 2 map. A  2x2x2(LxWxH) glass block and a 2x2x1(LxWxH) cobble stone hill. Agent can jump over the cobble stone block(gold) but cannot jump over the glass block. The agent start at the lapis_block and try to reach the redstone_block. The agent can either walk or jump. In level 1, there are () states and 2 actions
+Level 3 map was built basing on level 2 map. A  2x2x2(LxWxH) glass block and a 2x2x1(LxWxH) cobble stone hill. Agent can jump over the cobble stone block(gold) but cannot jump over the glass block. The agent start at the lapis\_block and try to reach the redstone\_block. The agent can either walk or jump. In level 1, there are () states and 2 actions
 #### Reward for each actions:
-For each action the agent makes, there is a reward value of -1 for each move, -10 for each jump, -100 for reaching the lava block, +100 for reaching the redstone_block(goal state)
+For each action the agent makes, there is a reward value of -1 for each move, -10 for each jump, -100 for reaching the lava block, +100 for reaching the redstone\_block(goal state)
 
 
 
@@ -66,4 +66,4 @@ For each action the agent makes, there is a reward value of -1 for each move, -1
 
 # Remaining Goals and Challenges
 
-[1]:	https://github.com/Moe202/Reward-Finder/blob/master/docs/images/eq.gif
+[image-1]:	https://github.com/Moe202/Reward-Finder/blob/master/docs/images/eq.gif
