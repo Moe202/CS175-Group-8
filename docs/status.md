@@ -36,11 +36,20 @@ self.actions = ["movewest 1", "moveeast 1", "movenorth 1", "movesouth 1", "jumpn
 #Action cost = 1 + self.action_cost[i]
 self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
 ```
+
+```python
+#Initial Q Values (this snippet is used everytime agent discovers a new area in the map)
+if not self.q_table.has_key(current_s):
+  self.q_table[current_s] = [0, 0, 0, 0, -2, -2, -2, -2]
+```
 **Learning Rate:** Alpha represents the learning rate. It is value between 0 and 1 ( 0 \< a \< 1). It indicates how much the utility values will be updated every time the agent takes an action. alpha = 0 means the agent will not learn anything. alpha = 1 means the agent will not consider any feature states (the agent only consider most recent information). In stochastic environment, alpha is preferable closer to 0 than 1. In our approach, we decide alpha value to be 0.1<br><br>
 **Discount Factor:** Gamma is the discount factor. It determines the importance of future information.  Gamma closer to 0 will encourages the agent to seek out rewards sooner rather than later. It makes the agent assign a smaller reward to the feature action. Gamma closer to 1 will makes the agent seek for high reward in the feature. This value usually closer to 1. We set gamma value to 1 in our approach<br><br>
 **Random Action:** Epsilon is the possibility of taking a random action instead of the best one.<br>
 **Immediate Reward Valuer:** r is the immediate reward value<br>
 **Max Q Value:** The action has the highest utility value in next state will become the new Q value of that states<br>
+
+**Initial Q Values** We decided to give each state 8 initial Q Values where the first 4 values are 0 and the last 4 are -2. These values were set to make the agent prefer walking over jumping initially until walking's Q value drops to -2.
+
 **Note:** Notice how each action costs 1 by default. We decided to creat an action_cost array to add additional cost to specific actions. A 'jump' has an additional cost of 9 on top of the default cost of 1 whereas a 'move' has no added cost.
 
 ### The 3 Levels
