@@ -5,7 +5,7 @@ title: Status
 
 
 
-# Project Summary
+# 1.Project Summary
 Solve an intricate maze with traps, lava, etc. Optimize by trying to improve the time the agent solves the maze or by finding the most optimal path. The input of the project would require a section of the map the agent would traverse. Output would be the most optimal path discovered by the agent. Lastly, we assume that every block is unknown and the agent must discover each path. Direct applications of this project would allow users to optimally beat multiple video games. At a high level, reinforcement learning discovered from this project can determine the ideal behavior within the manufacturing, delivery, and finance industries.
 
 Level 1: Flat terrain, with edge boundary  (Actions: Walk, Jump)<br>
@@ -18,7 +18,7 @@ Level 5: Moonshot case- 3D terrain, hills, hazards, blocks and zombies  (Actions
 
 
 
-# Approach
+# 2.Approach
 
 For progress report, our approach used the Q-Learning algorithm. Here is the equation of Q-Learning algorithm and our parameter set-up.<br>
 The Q-Learning equation:<br>
@@ -51,9 +51,9 @@ The  Figure shows the grid layout in two-dimensional. It specify the start and e
 #### Level 1:
 The level 1 map is a flat terrain with lava on eages. It is a 7x7x1(LxWxH) grid. The agent start at the lapis\_block and try to reach the redstone\_block. The agent can either walk or jump. In level 1, there are () states and 2 actions
 #### Level 2:
-The level 1 map is built basing on Level 1 map. 5 cobble stone blocks in the middle of map were replaced by 5 lava blocks.It is a 7x7x1(LxWxH) grid. The agent start at the lapis\_block and try to reach the redstone\_block. The agent can either walk or jump. In level 2, there are () states and 2 actions
+The level 1 map is built based on Level 1 map. 5 cobble stone blocks in the middle of map were replaced by 5 lava blocks.It is a 7x7x1(LxWxH) grid. The agent start at the lapis\_block and try to reach the redstone\_block. The agent can either walk or jump. In level 2, there are () states and 2 actions
 #### Level 3:
-Level 3 map was built basing on level 2 map. A  2x2x2(LxWxH) glass block and a 2x2x1(LxWxH) cobble stone hill. Agent can jump over the cobble stone block(gold) but cannot jump over the glass block. The agent start at the lapis\_block and try to reach the redstone\_block. The agent can either walk or jump. In level 1, there are () states and 2 actions
+Level 3 map was built based on level 2 map. A  2x2x2(LxWxH) glass block and a 2x2x1(LxWxH) cobble stone hill. Agent can jump over the cobble stone block(gold) but cannot jump over the glass block. The agent start at the lapis\_block and try to reach the redstone\_block. The agent can either walk or jump. In level 1, there are () states and 2 actions
 #### Reward for each actions:
 For each action the agent makes, there is a reward value of -1 for each move, -10 for each jump, -100 for reaching the lava block, +100 for reaching the redstone\_block(goal state)
 
@@ -65,7 +65,7 @@ For each action the agent makes, there is a reward value of -1 for each move, -1
 
 
 
-# Evaluation
+# 3.Evaluation
 For **qualitative evaluation**, we evaluate our project by checking how well the agent can solve the all 3 level mazes. We observe the agent when it is solving the maze to verify it works correctly. Also, we can check our agent by using the Cumulative Rewards Table.<br>
 
 **Level1:** one of the optimal path of level 1 is *(1,1) move-> (1,2) move-> (1,3) move-> (1,4) move-> (1,5) move-> (1,6) move-> (2,6) move-> (3,6) move-> (4,6) move-> (5,6) move-> (6,6)*. It takes 10 moves. Therefore, the best reward we can get is 90. The Cumulative Rewards Table shows how the agent successfully finds the solution with the highest reward.
@@ -90,9 +90,10 @@ In terms of **quantitative evaluation**, we evaluate our project by checking how
 ```
 
 
-# Remaining Goals and Challenges
+# 4.Remaining Goals and Challenges
 For the rest of weeks, we will add a “timed jump” which means the agent can either jump 1 blocks or 2-3 blocks. This will occur in level 4. It will be interesting to discover how the agent will perform when we add more uncertainty into the map and how we can improve its performance by adjusting our parameter values(reward values, learning rate, discount rate, etc.). Moreover, we plan to add nondeterministic actions into our project. For example, the agent may have a 20% probability of jumping left as opposed to walking left, obviously with respective reward factors for each action.
 Also, by level 5, our moonshot case, we will add zombies that will patrol the map and force the agent to perform zombie avoidance. This will add more actions to our project. Some challenges we faced while solving our three levels was being able to find an optimal path within 150 trials. This took many attempts at adjusting our Q-learning algorithm and by assigning a very large reward factor towards jumping. We did this because our agent would continually try to jump on the level 1 map, which did not require jumping to be solved optimally. Given our experience so far, so challenges we will face in the future are implementing more actions into our project and performing zombie avoidance. We plan to adjust our reward values accordingly and improve upon our Q-Learning algorithm to solve an optimal path with minimal trials. If the project proceeds as planned our team should be able to solve a level 5 map on a moderate to large scale.
+<img src="images/level1z.jpeg" title="level 1z map" width="150" height="150" /> <img src="images/level2z.jpeg" title="level 2z map" width="150" height="150" /> <img src="images/level3z.jpeg" title="level 3z map" width="150" height="150" />
 
 
 
