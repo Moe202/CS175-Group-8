@@ -12,7 +12,7 @@ title:  Home
 - Mohammed Adel Alabdullatif
 - Hongtao Liu
 
-# Video:
+# Video Summary
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/9oUhCFZGrDc/0.jpg)](https://www.youtube.com/watch?v=9oUhCFZGrDc)
 
 # Project Summary
@@ -23,6 +23,9 @@ Level 2: Flat terrain, with edge boundary and hazards in the middle of the map
 Level 3: 3D terrain, hills, hazards, blocks  
 Level 4: 3D terrain, hills, hazards, blocks, and timed jumps  
 Level 5: Moonshot case- 3D terrain, hills, hazards, blocks, timed jumps, and zombies     
+
+
+<img src="images/level1.jpeg" title="level 1 map" width="280" height="280" /> <img src="images/level2.jpeg" title="level 2 map" width="280" height="280" /> <img src="images/level3.jpeg" title="level 3 map" width="280" height="280" />
 
 # Proposal
 <a href="https://moe202.github.io/Reward-Finder/proposal.html"> Link </a>
