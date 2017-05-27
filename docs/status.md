@@ -33,7 +33,7 @@ self.gamma = 1.0 # discount rate
 # Set of actions
 self.actions = ["movewest 1", "moveeast 1", "movenorth 1", "movesouth 1", "jumpnorth 1", \
                         "jumpsouth 1", "jumpwest 1", "jumpeast 1"]
-Action cost = 1 + self.action_cost[i]
+#Action cost = 1 + self.action_cost[i]
 self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
 ```
 **Learning Rate:** Alpha represents the learning rate. It is value between 0 and 1 ( 0 \< a \< 1). It indicates how much the utility values will be updated every time the agent takes an action. alpha = 0 means the agent will not learn anything. alpha = 1 means the agent will not consider any feature states (the agent only consider most recent information). In stochastic environment, alpha is preferable closer to 0 than 1. In our approach, we decide alpha value to be 0.1<br><br>
@@ -41,6 +41,7 @@ self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
 **Random Action:** Epsilon is the possibility of taking a random action instead of the best one.<br>
 **Immediate Reward Valuer:** r is the immediate reward value<br>
 **Max Q Value:** The action has the highest utility value in next state will become the new Q value of that states<br>
+**Note:** Notice how each action costs 1 by default. We decided to creat an action_cost array to add additional cost to specific actions. A 'jump' has an additional cost of 9 on top of the default cost of 1 whereas a 'move' has no added cost.
 
 ### The 3 Levels
 <img src="images/grid.jpeg" title="grid" width="1100" height="434" />
