@@ -91,7 +91,7 @@ For **qualitative evaluation**, we evaluate our project by checking how well the
 <center><img src="images/crt3.jpeg" title="Cumulative Rewards Table lvl 3" width="528" height="162.4" align="middle"/></center><br>
 
 <br>
-In terms of **quantitative evaluation**, we evaluate our project by checking how long it takes the agent to solve each mazes. That is, we want the agent to slove the maze as quick as it can. We use the Cumulative Rewards Table to check how many runs it takes before getting the best reward. In the most recent test, the agent needs 44 runs in level 1, 56 runs in level 2 and 104 runs in level 3. We hope we can improve this by changing our reward function and Q-Learning parameter. We want to see how changes on these parameter can affect agent'sperformance.<br>
+In terms of **quantitative evaluation**, we evaluate our project by checking how long it takes the agent to solve each mazes. That is, we want the agent to slove the maze as quick as it can. We use the Cumulative Rewards Table to check how many runs it takes before getting the best reward. In the most recent test, the agent needs 44 runs in level 1, 56 runs in level 2 and 104 runs in level 3. We hope we can improve this by changing our reward function and Q-Learning parameter. We want to see how changes on these parameter can affect agent's performance.<br>
 
 ```
 | Tables        |    level 1    |    level 2     |    level 3    |
