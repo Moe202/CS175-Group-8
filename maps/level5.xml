@@ -14,7 +14,6 @@
                     <DrawingDecorator>
                       <!-- coordinates for cuboid are inclusive -->
                       <DrawCuboid x1="0"  y1="46" z1="0"  x2="10" y2="46" z2="10" type="lava" />      <!-- surrounding lava -->
-                      <DrawCuboid x1="1"  y1="46" z1="1"  x2="9" y2="46" z2="9" type="lava" />   <!-- floor-->
                       <DrawBlock x="1"  y="48" z="1" type="lapis_block" />    <!-- the starting point -->
                       <DrawBlock x="9"  y="48" z="4" type="redstone_block" />     <!-- the destination -->
                       <DrawCuboid x1="0"  y1="46" z1="0"  x2="0" y2="46" z2="10" type="lava" />
@@ -53,7 +52,7 @@
                       <DrawCuboid x1="3"  y1="46" z1="3"  x2="3" y2="48" z2="3" type="cobblestone" />
                       <DrawCuboid x1="4"  y1="49" z1="4"  x2="5" y2="49" z2="4" type="cobblestone" />
                       <DrawCuboid x1="7"  y1="49" z1="7"  x2="6" y2="49" z2="7" type="cobblestone" />
-                      <DrawEntity x="8"  y="49" z="8" type="Zombie" />
+                      <DrawEntity x="8"  y="49" z="8" type="Zombie" yaw="0"/>
 
 
 
@@ -68,6 +67,9 @@
                   <Name>RewardFinder</Name>
                   <AgentStart>
                     <Placement x="1.5" y="49" z="1.5" pitch="30" yaw="0"/>
+                    <Inventory>
+                      <InventoryItem slot="0" type="diamond_sword"/>
+                    </Inventory>
                   </AgentStart>
                   <AgentHandlers>
                     <DiscreteMovementCommands/>
