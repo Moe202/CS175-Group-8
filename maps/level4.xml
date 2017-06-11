@@ -51,6 +51,8 @@
                       <DrawCuboid x1="6"  y1="46" z1="2"  x2="6" y2="48" z2="2" type="cobblestone" />
                       <DrawCuboid x1="3"  y1="46" z1="2"  x2="3" y2="48" z2="2" type="cobblestone" />
                       <DrawCuboid x1="3"  y1="46" z1="3"  x2="3" y2="48" z2="3" type="cobblestone" />
+                      <DrawCuboid x1="4"  y1="49" z1="4"  x2="5" y2="49" z2="4" type="cobblestone" />
+                      <DrawCuboid x1="7"  y1="49" z1="7"  x2="6" y2="49" z2="7" type="cobblestone" />
 
 
 
