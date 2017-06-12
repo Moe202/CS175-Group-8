@@ -47,7 +47,7 @@
                     <ObservationFromFullStats/>
                     <RewardForTouchingBlockType>
                       <Block reward="-100.0" type="lava" behaviour="onceOnly"/>
-                      <Block reward="100.0" type="redstone_block" behaviour="onceOnly"/>
+                      <Block reward="300.0" type="redstone_block" behaviour="onceOnly"/>
                     </RewardForTouchingBlockType>
                     <RewardForSendingCommand reward="-1" />
                     <AgentQuitFromTouchingBlockType>
