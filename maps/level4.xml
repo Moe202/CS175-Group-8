@@ -71,6 +71,7 @@
                   </AgentStart>
                   <AgentHandlers>
                     <DiscreteMovementCommands/>
+                    <AbsoluteMovementCommands/>
                     <ObservationFromFullStats/>
                     <RewardForTouchingBlockType>
                       <Block reward="-100.0" type="lava" behaviour="onceOnly"/>
