@@ -43,14 +43,41 @@ class TabQAgent:
         self.logger.handlers = []
         self.logger.addHandler(logging.StreamHandler(sys.stdout))
         # Set of actions
-        self.actions = ["movewest 1", "moveeast 1", "movenorth 1", "movesouth 1", "jumpnorth 1", "jumpsouth 1", "jumpwest 1", "jumpeast 1"]
+        self.actions = ["movewest 1", "moveeast 1", "movenorth 1", "movesouth 1", "tpn", "tps", "tpe", "tpw"]
         # Additional action costs to take into account (Each action costs 1 by default). 
         # Action cost = 1 + self.action_cost[i]
         self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]  
         self.q_table = {}
         self.canvas = None
         self.root = None
+
+    def sendAction(self, agent_host, x, y, z, action):
+        if(action == 4):
+            y = y + 1
+            z = z + 2
+            tp_command = "tp {0:0.1f} {1:0.1f} {2:0.1f}".format(x, y, z)
+            agent_host.sendCommand(tp_command)
+        elif(action == 5):
+            y = y + 1
+            z = z - 2
+            tp_command = "tp {0:0.1f} {1:0.1f} {2:0.1f}".format(x, y, z)
+            agent_host.sendCommand(tp_command)
+        elif(action == 6):
+            y = y + 1
+            x = x + 2
+            tp_command = "tp {0:0.1f} {1:0.1f} {2:0.1f}".format(x, y, z)
+            agent_host.sendCommand(tp_command)
+        elif(action == 7):
+            y = y + 1
+            x = x - 2
+            tp_command = "tp {0:0.1f} {1:0.1f} {2:0.1f}".format(x, y, z)
+            agent_host.sendCommand(tp_command)
     
+        else:
+            agent_host.sendCommand(self.actions[action])
+
+
+
     def updateQTable( self, reward, current_state ):
         """Change q_table to reflect what we have learnt."""
         
@@ -81,9 +108,10 @@ class TabQAgent:
         obs_text = world_state.observations[-1].text
         obs = json.loads(obs_text) # most recent observation
         self.logger.debug(obs)
-        if not u'XPos' in obs or not u'ZPos' in obs:
+        if not u'XPos' in obs or not u'ZPos' in obs or not u'Ypos':
             self.logger.error("Incomplete observation received: %s" % obs_text)
             return 0
+
         current_s = "%d:%d" % (int(obs[u'XPos']), int(obs[u'ZPos']))
         self.logger.debug("State: %s (x = %.2f, z = %.2f)" % (current_s, float(obs[u'XPos']), float(obs[u'ZPos'])))
         
@@ -114,14 +142,14 @@ class TabQAgent:
         
         # try to send the selected action, only update prev_s if this succeeds
         try:
-            agent_host.sendCommand(self.actions[a])
+            self.sendAction(agent_host, obs[u'XPos'], obs[u'YPos'], obs[u'ZPos'], a)
             self.prev_s = current_s
             self.prev_a = a
         
         except RuntimeError as e:
             self.logger.error("Failed to send command: %s" % e)
         
-        time.sleep(0.1)
+        time.sleep(0.3)
         return (current_r)
     
     def run(self, agent_host):
