@@ -69,7 +69,7 @@ class TabQAgent:
             x = x + 2
             tp_command = "tp {0:0.1f} {1:0.1f} {2:0.1f}".format(x, y, z)
             agent_host.sendCommand(tp_command)
-            time.sleep(1)
+            time.sleep(0.5)
         elif(action == 7):
             y = y + 1
             x = x - 2
@@ -119,7 +119,6 @@ class TabQAgent:
         self.logger.debug("State: %s (x = %.2f, z = %.2f)" % (current_s, float(obs[u'XPos']), float(obs[u'ZPos'])))
         
         # Set initial q-values for actions in new state 
-        # ("move" actions initial values are 0 while "jump" actions initial values are -2)
         if not self.q_table.has_key(current_s):
             self.q_table[current_s] = [0, 0, 0, 0, 0, 0, 0, 0]
         
@@ -136,6 +135,8 @@ class TabQAgent:
             m = max(self.q_table[current_s])
             self.logger.debug("Current values: %s" % ",".join(str(x) for x in self.q_table[current_s]))
             l = list()
+            
+            #Favor move over jump if q values of jump and move are equal to the max q value
             moveAvailable = False
             for x in range(0, len(self.actions)):
                 if self.q_table[current_s][x] == m:
@@ -247,7 +248,7 @@ with open(mission_file, 'r') as f:
     mission_xml = f.read()
     my_mission = MalmoPython.MissionSpec(mission_xml, True)
 
-# Let the agent run 150 times
+# Let the agent run 300 times
 max_retries = 3
 
 if agent_host.receivedArgument("test"):
