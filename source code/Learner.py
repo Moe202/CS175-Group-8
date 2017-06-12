@@ -46,7 +46,7 @@ class TabQAgent:
         self.actions = ["movewest 1", "moveeast 1", "movenorth 1", "movesouth 1", "tpn", "tps", "tpe", "tpw"]
         # Additional action costs to take into account (Each action costs 1 by default). 
         # Action cost = 1 + self.action_cost[i]
-        self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]  
+        self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
         self.q_table = {}
         self.canvas = None
         self.root = None
@@ -57,25 +57,28 @@ class TabQAgent:
             z = z + 2
             tp_command = "tp {0:0.1f} {1:0.1f} {2:0.1f}".format(x, y, z)
             agent_host.sendCommand(tp_command)
+            time.sleep(0.5)
         elif(action == 5):
             y = y + 1
             z = z - 2
             tp_command = "tp {0:0.1f} {1:0.1f} {2:0.1f}".format(x, y, z)
             agent_host.sendCommand(tp_command)
+            time.sleep(0.5)
         elif(action == 6):
             y = y + 1
             x = x + 2
             tp_command = "tp {0:0.1f} {1:0.1f} {2:0.1f}".format(x, y, z)
             agent_host.sendCommand(tp_command)
+            time.sleep(1)
         elif(action == 7):
             y = y + 1
             x = x - 2
             tp_command = "tp {0:0.1f} {1:0.1f} {2:0.1f}".format(x, y, z)
             agent_host.sendCommand(tp_command)
-    
+            time.sleep(0.5)
         else:
             agent_host.sendCommand(self.actions[action])
-
+            time.sleep(0.2)
 
 
     def updateQTable( self, reward, current_state ):
@@ -118,7 +121,7 @@ class TabQAgent:
         # Set initial q-values for actions in new state 
         # ("move" actions initial values are 0 while "jump" actions initial values are -2)
         if not self.q_table.has_key(current_s):
-            self.q_table[current_s] = [0, 0, 0, 0, -2, -2, -2, -2]
+            self.q_table[current_s] = [0, 0, 0, 0, 0, 0, 0, 0]
         
         # update Q values
         if self.prev_s is not None and self.prev_a is not None:
@@ -133,9 +136,14 @@ class TabQAgent:
             m = max(self.q_table[current_s])
             self.logger.debug("Current values: %s" % ",".join(str(x) for x in self.q_table[current_s]))
             l = list()
+            moveAvailable = False
             for x in range(0, len(self.actions)):
                 if self.q_table[current_s][x] == m:
-                    l.append(x)
+                    if x < 4:
+                        l.append(x)
+                        moveAvailable = True
+                    elif not moveAvailable:
+                        l.append(x)
             y = random.randint(0, len(l)-1)
             a = l[y]
             self.logger.info("Taking q action: %s" % self.actions[a])
@@ -149,7 +157,6 @@ class TabQAgent:
         except RuntimeError as e:
             self.logger.error("Failed to send command: %s" % e)
         
-        time.sleep(0.3)
         return (current_r)
     
     def run(self, agent_host):
@@ -234,7 +241,7 @@ if agent_host.receivedArgument("help"):
     exit(0)
 
 # -- set up the mission -- #
-mission_file = './level1.xml'     # Change this to load different maps/missions
+mission_file = './brianlevel4.xml'     # Change this to load different maps/missions
 with open(mission_file, 'r') as f:
     print "Loading mission from %s" % mission_file
     mission_xml = f.read()
@@ -246,7 +253,7 @@ max_retries = 3
 if agent_host.receivedArgument("test"):
     num_repeats = 1
 else:
-    num_repeats = 150
+    num_repeats = 300
 
 cumulative_rewards = []
 for i in range(num_repeats):
