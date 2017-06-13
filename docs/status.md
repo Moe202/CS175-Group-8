@@ -3,6 +3,10 @@ layout: default
 title: Status
 ---
 
+# Video Summary:
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/9oUhCFZGrDc/0.jpg)](https://www.youtube.com/watch?v=9oUhCFZGrDc)
+
+
 
 
 # 1.Project Summary
@@ -57,7 +61,7 @@ if not self.q_table.has_key(current_s):
 
 The  Figure shows the grid layout in two-dimensional. It specify the start and end blocks. Also，it shows the terrian of mazes(the floor of the maze is cobblestone, block is built by glass\_blocks, hill is built by cobblestone\_blocks). The number in each grid represent the **(x,z)** value and each grids has an altitude value which is  **y**.
 
-Currently, we have three maps, each one is based on the previous one. 
+Currently, we have three maps, each one is based on the previous one.
 #### Level 1:
 The level 1 map is a flat terrain with lava on eages. It is a 7x7x1(LxWxH) grid. The agent start at the lapis\_block and try to reach the redstone\_block. The agent can either walk or jump. In level 1, there are () states and 2 actions
 #### Level 2:
@@ -108,6 +112,3 @@ Also, by level 5, our moonshot case, we will add zombies that will patrol the ma
 
 
 [image-1]:	https://github.com/Moe202/Reward-Finder/blob/master/docs/images/eq.gif
-
-# Video:
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/9oUhCFZGrDc/0.jpg)](https://www.youtube.com/watch?v=9oUhCFZGrDc)
