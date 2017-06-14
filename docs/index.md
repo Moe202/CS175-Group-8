@@ -11,7 +11,7 @@ title:  Home
 # Video Summary
 
 <div id="video_frame">
-  <iframe src="https://www.youtube.com/embed/9oUhCFZGrDc" frameborder="0" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/9oUhCFZGrDc" frameborder="0" allowfullscreen></iframe>
 </div>
 
 # Project Summary
