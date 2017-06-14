@@ -5,7 +5,7 @@ title:  Home
 
 ## Welcome our Malmo Reward-Finder Project
 #### CS 175: Project in AI
-<img src="images/logo.jpeg" title="logo" />
+<img src="images/logo.jpeg" title="logo" width="647" height="256"  />
 
 ### Team:
 - Brian Wong
