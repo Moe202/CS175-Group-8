@@ -3,14 +3,10 @@ layout: default
 title:  Home
 ---
 
-## Welcome our Malmo Reward-Finder Project
-#### CS 175: Project in AI
+<p align="center">
 <img src="images/logo.jpeg" title="logo" width="647" height="256"  />
+</p>
 
-### Team:
-- Brian Wong
-- Mohammed Adel Alabdullatif
-- Hongtao Liu
 
 # Video Summary
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/9oUhCFZGrDc/0.jpg)](https://www.youtube.com/watch?v=9oUhCFZGrDc)
