@@ -14,7 +14,7 @@
                     <DrawingDecorator>
                       <!-- coordinates for cuboid are inclusive -->
                       
-                      <DrawCuboid x1="0"  y1="0" z1="0"  x2="9" y2="45" z2="9" type="lava" />      <!-- surrounding lava -->
+                      <DrawCuboid x1="-1"  y1="0" z1="-1"  x2="8" y2="45" z2="8" type="lava" />      <!-- surrounding lava -->
                       <DrawCuboid x1="1"  y1="45" z1="1"  x2="6" y2="45" z2="6" type="cobblestone" />   <!-- floor-->
                       <DrawCuboid x1="6"  y1="45" z1="5"  x2="2" y2="45" z2="5" type="lava" />
                       <DrawBlock x="1"  y="45" z="5" type="lava" />
