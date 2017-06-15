@@ -6,7 +6,7 @@ title: Final
 ### Video Summary
 <p align="center">
 <div id="video_frame">
-  <iframe width="560" height="315" src="https://www.youtube.com/watch?v=F1k1Qw6ZEIo" frameborder="0" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/F1k1Qw6ZEIo" frameborder="0" allowfullscreen></iframe>
 </div>
 </p>
 
