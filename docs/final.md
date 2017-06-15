@@ -128,7 +128,7 @@ For **quantitative evaluation**, we plotted the reward values in a graph to see 
 
 **Level1:** one of the optimal path of level 1 is *(1,1) move-\> (1,2) move-\> (1,3) move-\> (1,4) move-\> (1,5) move-\> (1,6) move-\> (2,6) move-\> (3,6) move-\> (4,6) move-\> (5,6) move-\> (6,6)*. It takes 10 moves. Therefore, the best reward we can get is 90. The evaluation graph shows how the agent successfully finds the solution with the highest reward. Notice how towards the end the value converges to 90.
 <center><img src="images/level1optimalpath.png" title="lvl 1 optimal path" width="528" height="528" />
-<img src="images/Level1Eval.jpg]" title="Cumulative Rewards Table lvl 1" width="528" height="528" /></center><br>
+<img src="images/Level1Eval.jpg" title="Cumulative Rewards Table lvl 1" width="528" height="528" /></center><br>
 
 **Level2:** one of the optimal path of level 2 is *(1,1) move-\> (2,1) move-\> (2,2) move-\> (2,3) move-\> (3,3) move-\> (4,3) move-\> (5,3) move-\> (5,4) move-\> (5,5) move-\> (5,6) move-\> (6,6)*. It also takes 10 moves. Therefore, the best reward we can get is 90. Here is the Cumulative Rewards Table of level 2. The agent successfully finds the solution with the highest reward in level 2.Notice how towards the end the value converges to 90.
 <center><img src="images/level2optimalpath.png" title="lvl 2 optimal path" width="528" height="528" />
