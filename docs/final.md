@@ -12,7 +12,7 @@ title: Final
 
 
 
-# 1.Project Summary
+## 1.Project Summary
 Solve an intricate maze with traps, lava, etc. Optimize by trying to improve the time the agent solves the maze or by finding the most optimal path. The input of the project would require a section of the map the agent would traverse. Output would be the most optimal path discovered by the agent. Lastly, we assume that every block is unknown and the agent must discover each path. Direct applications of this project would allow users to optimally beat multiple video games. At a high level, reinforcement learning discovered from this project can determine the ideal behavior within the manufacturing, delivery, and finance industries.
 
 Different from what we proposed before, we added a new Level 0 to discover the relation between reward values and agent’s action. <br>
@@ -31,9 +31,9 @@ Level 4: 3D terrain, hills, hazards, blocks, a larger and more complex map  (Act
 
 
 
-# 2.Approach
+## 2.Approaches
 
-For progress report, our approach used the Q-Learning algorithm. Here is the equation of Q-Learning algorithm and our parameter set-up.<br>
+For final report, our approach used the Q-Learning algorithm. Here is the equation of Q-Learning algorithm and our parameter set-up.<br>
 The Q-Learning equation:<br>
 
 <img src="images/eq.gif" title="equation" />
@@ -44,17 +44,15 @@ self.alpha = 0.1 # learning rate
 self.gamma = 1.0 # discount rate
 
 # Set of actions
-self.actions = ["movewest 1", "moveeast 1", "movenorth 1", "movesouth 1", "jumpnorth 1", \
-                        "jumpsouth 1", "jumpwest 1", "jumpeast 1"]
-#Action cost = 1 + self.action_cost[i]
+self.actions = ["movewest 1", "moveeast 1", "movenorth 1", "movesouth 1", "tpn", "tps", "tpe", "tpw"]
+# Additional action costs to take into account (Each action costs 1 by default). 
+# Action cost = 1 + self.action_cost[i]
+#agent 1
 self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
+# agent 2
+# self.action_cost = [0, 0, 0, 0, 300, 300, 300, 300]
 ```
 
-```python
-#Initial Q Values (this snippet is used everytime agent discovers a new area in the map)
-if not self.q_table.has_key(current_s):
-  self.q_table[current_s] = [0, 0, 0, 0, -2, -2, -2, -2] 
-```
 **Learning Rate:** Alpha represents the learning rate. It is value between 0 and 1 ( 0 \< a \< 1). It indicates how much the utility values will be updated every time the agent takes an action. alpha = 0 means the agent will not learn anything. alpha = 1 means the agent will not consider any feature states (the agent only consider most recent information). In stochastic environment, alpha is preferable closer to 0 than 1. In our approach, we decide alpha value to be 0.1<br><br>
 **Discount Factor:** Gamma is the discount factor. It determines the importance of future information.  Gamma closer to 0 will encourages the agent to seek out rewards sooner rather than later. It makes the agent assign a smaller reward to the feature action. Gamma closer to 1 will makes the agent seek for high reward in the feature. This value usually closer to 1. We set gamma value to 1 in our approach<br><br>
 **Random Action:** Epsilon is the possibility of taking a random action instead of the best one.<br>
@@ -65,7 +63,9 @@ if not self.q_table.has_key(current_s):
 
 **Note:** Notice how each action costs 1 by default. We decided to creat an action\_cost array to add additional cost to specific actions. A 'jump' has an additional cost of 9 on top of the default cost of 1 whereas a 'move' has no added cost.
 
-### Level 0
+### Test Environment
+
+#### Level 0
 <img src="images/level0gridFinal.png" title="grid" width="434" height="434" />
 
 This level was used to show how changing the cost of jumping forces the agent to choose one path over the other. The first optimal path to the goal involves jumping over the lava to reach the goal block, whereas the second optimal path only includes walking.
@@ -74,7 +74,7 @@ For each action the agent makes, there is a reward value of -1 for each move, -1
 #### Reward for each actions for Agent 2:
 For each action the agent makes, there is a reward value of -1 for each move, -301 for each jump, -100 for reaching the lava block, +300 for reaching the redstone\_block(goal state)
 
-### The 3 Levels
+### Level 1, Level 2, Level 3
 <img src="images/grid.jpeg" title="grid" width="1100" height="434" />
 
 The  Figure shows the grid layout in two-dimensional. It specify the start and end blocks. Also，it shows the terrian of mazes(the floor of the maze is cobblestone, block is built by glass\_blocks, hill is built by cobblestone\_blocks). The number in each grid represent the **(x,z)** value and each grids has an altitude value which is  **y**.
