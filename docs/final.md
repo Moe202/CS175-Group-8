@@ -3,15 +3,17 @@ layout: default
 title: Final
 ---
 
-# Video Summary:
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/9oUhCFZGrDc/0.jpg)](https://www.youtube.com/watch?v=9oUhCFZGrDc)
-
-
-
+### Video Summary
+<p align="center">
+<div id="video_frame">
+  <iframe width="560" height="315" src="https://www.youtube.com/watch?v=F1k1Qw6ZEIo" frameborder="0" allowfullscreen></iframe>
+</div>
+</p>
 
 # 1.Project Summary
 Solve an intricate maze with traps, lava, etc. Optimize by trying to improve the time the agent solves the maze or by finding the most optimal path. The input of the project would require a section of the map the agent would traverse. Output would be the most optimal path discovered by the agent. Lastly, we assume that every block is unknown and the agent must discover each path. Direct applications of this project would allow users to optimally beat multiple video games. At a high level, reinforcement learning discovered from this project can determine the ideal behavior within the manufacturing, delivery, and finance industries.
 
+Level 0: Flat terrain, with edge boundary, hazards (test agents ability to walk or jump)<br>
 Level 1: Flat terrain, with edge boundary  (Actions: Walk, Jump)<br>
 Level 2: Flat terrain, with edge boundary and hazards in the middle of the map  (Actions: Walk, Jump)<br>
 Level 3: 3D terrain, hills, hazards, blocks  (Actions: Walk, Jump)<br>
