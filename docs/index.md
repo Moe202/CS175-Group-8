@@ -17,7 +17,7 @@ Now, agent can either Move 1 steps or Jump 2 steps.<br>
 <br>
 Here is a brief description of our test environment:<br>
 
-__Level 0__: Flat terrain, with edge boundary and hazards, agent must Jump to find the most optimal path (Actions: Walk, Jump) <br>
+__Level 0__: Flat terrain, with edge boundary and hazards, two agents, agent1 must Jump to find the most optimal path (Actions: Walk, Jump) <br>
 __Level 1__: Flat terrain, with edge boundary  (Actions: Walk, Jump)<br>
 __Level 2__: Flat terrain, with edge boundary and hazards in the middle of the map  (Actions: Walk, Jump)<br>
 __Level 3__: 3D terrain, hills, hazards, blocks  (Actions: Walk, Jump)<br>
