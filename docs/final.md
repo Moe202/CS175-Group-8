@@ -20,9 +20,9 @@ Moreover, We also discard our level 5 since we found it was not necessary to add
 Now, agent can either move 1 steps or teleport 2 steps.
 
 Level 0: Flat terrain, with edge boundary and hazards, agent must Teleport to find the most optimal path (Actions: Walk, Teleport) <br>
-Level 1: Flat terrain, with edge boundary  (Actions: Walk, Teleport)<br>
-Level 2: Flat terrain, with edge boundary and hazards in the middle of the map  (Actions: Walk, Teleport)<br>
-Level 3: 3D terrain, hills, hazards, blocks  (Actions: Walk, Teleport)<br>
+Level 1: Flat terrain, with edge boundary  (Actions: Walk, Jump)<br>
+Level 2: Flat terrain, with edge boundary and hazards in the middle of the map  (Actions: Walk, Jump)<br>
+Level 3: 3D terrain, hills, hazards, blocks  (Actions: Walk, Jump)<br>
 Level 4: 3D terrain, hills, hazards, blocks, a larger and more complex map  (Actions: Walk, Teleport)<br>
 
 <img src="images/level1mapfinal.png" title="level 1 map" width="280" height="280" /> <img src="images/level2mapfinal.png" title="level2mapfinal.png" width="280" height="280" /> <img src="images/level3mapfinal.png" title="level 3 map" width="280" height="280" /> <br>
@@ -53,17 +53,26 @@ self.action_cost = [0, 0, 0, 0, 9, 9, 9, 9]
 ```python
 #Initial Q Values (this snippet is used everytime agent discovers a new area in the map)
 if not self.q_table.has_key(current_s):
-  self.q_table[current_s] = [0, 0, 0, 0, -2, -2, -2, -2]
+  self.q_table[current_s] = [0, 0, 0, 0, -2, -2, -2, -2] 
 ```
 **Learning Rate:** Alpha represents the learning rate. It is value between 0 and 1 ( 0 \< a \< 1). It indicates how much the utility values will be updated every time the agent takes an action. alpha = 0 means the agent will not learn anything. alpha = 1 means the agent will not consider any feature states (the agent only consider most recent information). In stochastic environment, alpha is preferable closer to 0 than 1. In our approach, we decide alpha value to be 0.1<br><br>
 **Discount Factor:** Gamma is the discount factor. It determines the importance of future information.  Gamma closer to 0 will encourages the agent to seek out rewards sooner rather than later. It makes the agent assign a smaller reward to the feature action. Gamma closer to 1 will makes the agent seek for high reward in the feature. This value usually closer to 1. We set gamma value to 1 in our approach<br><br>
 **Random Action:** Epsilon is the possibility of taking a random action instead of the best one.<br>
-**Immediate Reward Valuer:** r is the immediate reward value<br>
+**Immediate Reward Value:** r is the immediate reward value<br>
 **Max Q Value:** The action has the highest utility value in next state will become the new Q value of that states<br>
 
-**Initial Q Values** We decided to give each state 8 initial Q Values where the first 4 values are 0 and the last 4 are -2. These values were set to make the agent prefer walking over jumping initially until walking's Q value drops to -2.
+**Initial Q Values** We decided to give each state 8 initial Q Values where the first 4 values are 0 and the last 4 are -2. These values were set to make the agent prefer walking over jumping initially until walking's Q value drops to -2. This was only used for levels 1, 2, 3.
 
 **Note:** Notice how each action costs 1 by default. We decided to creat an action\_cost array to add additional cost to specific actions. A 'jump' has an additional cost of 9 on top of the default cost of 1 whereas a 'move' has no added cost.
+
+### Level 0
+<img src="images/level0gridFinal.png" title="grid" width="434" height="434" />
+
+This level was used to show how changing the cost of jumping forces the agent to choose one path over the other. The first optimal path to the goal involves jumping over the lava to reach the goal block, whereas the second optimal path only includes walking.
+#### Reward for each actions for Agent 1:
+For each action the agent makes, there is a reward value of -1 for each move, -10 for each jump, -100 for reaching the lava block, +300 for reaching the redstone\_block(goal state).
+#### Reward for each actions for Agent 2:
+For each action the agent makes, there is a reward value of -1 for each move, -301 for each jump, -100 for reaching the lava block, +300 for reaching the redstone\_block(goal state)
 
 ### The 3 Levels
 <img src="images/grid.jpeg" title="grid" width="1100" height="434" />
@@ -89,11 +98,13 @@ For each action the agent makes, there is a reward value of -1 for each move, -1
 
 
 # 3.Evaluation
-For **qualitative evaluation**, we evaluate our project by checking how well the agent can solve all 3 level mazes. We observe the agent when it is solving the maze to verify it works correctly. Also, we can check our agent by using the Cumulative Rewards Table.<br>
+For **qualitative evaluation**, we evaluate our project by checking how well the agent can solve all 3 level mazes. We observe the agent when it is solving the maze to verify it works correctly. Also, we can check our agent by using the Cumulative Rewards Table.
 
-**Level1:** one of the optimal path of level 1 is *(1,1) move-\> (1,2) move-\> (1,3) move-\> (1,4) move-\> (1,5) move-\> (1,6) move-\> (2,6) move-\> (3,6) move-\> (4,6) move-\> (5,6) move-\> (6,6)*. It takes 10 moves. Therefore, the best reward we can get is 90. The Cumulative Rewards Table shows how the agent successfully finds the solution with the highest reward.
+For **quantitative evaluation**, we plotted the reward values in a graph to see whether or not the reward found by the agent eventually converges near the optimal solution. We plotted the optimal solution as a dashed red line and the rewards found by the agent as a blue solid line.<br>
 
-<center><img src="images/crt1.jpeg" title="Cumulative Rewards Table lvl 1" width="528" height="162.4" align="middle" /></center><br>
+**Level1:** one of the optimal path of level 1 is *(1,1) move-\> (1,2) move-\> (1,3) move-\> (1,4) move-\> (1,5) move-\> (1,6) move-\> (2,6) move-\> (3,6) move-\> (4,6) move-\> (5,6) move-\> (6,6)*. It takes 10 moves. Therefore, the best reward we can get is 90. The evaluation graph shows how the agent successfully finds the solution with the highest reward. Notice how towards the end the value converges to 90.
+
+<center><img src="images/Level1Eval.jpg" title="Cumulative Rewards Table lvl 1" width="528" height="528" align="middle" /></center><br>
 
 **Level2:** one of the optimal path of level 2 is *(1,1) move-\> (2,1) move-\> (2,2) move-\> (2,3) move-\> (3,3) move-\> (4,3) move-\> (5,3) move-\> (5,4) move-\> (5,5) move-\> (5,6) move-\> (6,6)*. It also takes 10 moves. Therefore, the best reward we can get is 90. Here is the Cumulative Rewards Table of level 2. The agent successfully finds the solution with the highest reward in level 2.
 
@@ -104,7 +115,7 @@ For **qualitative evaluation**, we evaluate our project by checking how well the
 <center><img src="images/crt3.jpeg" title="Cumulative Rewards Table lvl 3" width="528" height="162.4" align="middle"/></center><br>
 
 <br>
-In terms of **quantitative evaluation**, we evaluate our project by checking how long it takes the agent to solve each mazes. That is, we want the agent to slove the maze as quick as it can. We use the Cumulative Rewards Table to check how many runs it takes before getting the best reward. In the most recent test, the agent needs 44 runs in level 1, 56 runs in level 2 and 104 runs in level 3. We hope we can improve this by changing our reward function and Q-Learning parameter. We want to see how changes on these parameter can affect agent's performance.<br>
+In addition to plotting graphs, we decided to use a second method for **quantitative evaluation**. We evaluate our project by checking how long it takes the agent to solve each mazes. That is, we want the agent to slove the maze as quick as it can. We use the Cumulative Rewards Table to check how many runs it takes before getting the best reward. In the most recent test, the agent needs 44 runs in level 1, 56 runs in level 2 and 104 runs in level 3. We hope we can improve this by changing our reward function and Q-Learning parameter. We want to see how changes on these parameter can affect agent's performance.<br>
 
 ```
 | Tables        |    level 1    |    level 2     |    level 3    |
