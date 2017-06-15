@@ -31,7 +31,7 @@ __Level 2__: Flat terrain, with edge boundary and hazards in the middle of the m
 __Level 3__: 3D terrain, hills, hazards, blocks  (Actions: Walk, Jump)<br>
 __Level 4__: 3D terrain, hills, hazards, blocks, a larger and more complex map  (Actions: Walk, Jump)<br>
 
-<center><img src="images/level1mapfinal.png" title="level 1 map" width="280" height="280" /> <img src="images/level2mapfinal.png" title="level2mapfinal.png" width="280" height="280" /> <img src="images/level3mapfinal.png" title="level 3 map" width="280" height="280" /> <br>
+<center><img src="images/level0mapfinal.png" title="level 0 map" width="280" height="280" /> <img src="images/level1mapfinal.png" title="level 1 map" width="280" height="280" /> <img src="images/level2mapfinal.png" title="level2mapfinal.png" width="280" height="280" /> <img src="images/level3mapfinal.png" title="level 3 map" width="280" height="280" /> <br>
 <img src="images/level4mapfinal.png" title="level 4 map" width="340" height="340" /></center>
 
 
