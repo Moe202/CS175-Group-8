@@ -127,15 +127,15 @@ For **qualitative evaluation**, we evaluate our project by checking how well the
 For **quantitative evaluation**, we plotted the reward values in a graph to see whether or not the reward found by the agent eventually converges near the optimal solution. We plotted the optimal solution as a dashed red line and the rewards found by the agent as a blue solid line.<br>
 
 **Level1:** one of the optimal path of level 1 is *(1,1) move-\> (1,2) move-\> (1,3) move-\> (1,4) move-\> (1,5) move-\> (1,6) move-\> (2,6) move-\> (3,6) move-\> (4,6) move-\> (5,6) move-\> (6,6)*. It takes 10 moves. Therefore, the best reward we can get is 90. The evaluation graph shows how the agent successfully finds the solution with the highest reward. Notice how towards the end the value converges to 90.
-<center><img src="images/level1optimalpath.jpg" title="lvl 1 optimal path" width="528" height="528" />
-<img src="images/Level1Eval.jpg" title="Cumulative Rewards Table lvl 1" width="528" height="528" /></center><br>
+<center><img src="images/level1optimalpath.png" title="lvl 1 optimal path" width="528" height="528" />
+<img src="images/Level1Eval.jpg]" title="Cumulative Rewards Table lvl 1" width="528" height="528" /></center><br>
 
 **Level2:** one of the optimal path of level 2 is *(1,1) move-\> (2,1) move-\> (2,2) move-\> (2,3) move-\> (3,3) move-\> (4,3) move-\> (5,3) move-\> (5,4) move-\> (5,5) move-\> (5,6) move-\> (6,6)*. It also takes 10 moves. Therefore, the best reward we can get is 90. Here is the Cumulative Rewards Table of level 2. The agent successfully finds the solution with the highest reward in level 2.Notice how towards the end the value converges to 90.
-<center><img src="images/level2optimalpath.jpg" title="lvl 2 optimal path" width="528" height="528" />
+<center><img src="images/level2optimalpath.png" title="lvl 2 optimal path" width="528" height="528" />
 <img src="images/Level2Eval.jpg" title="Cumulative Rewards Table lvl 2" width="528" height="528" /></center><br>
 
 **Level3:** one of the optimal path of level 3 is *(1,1) move-\> (2,1) move-\> (2,2) move-\> (2,3) move-\> (3,3) moves-\> (3,4) jump-\> (4,4) move-\> (5,4) move-\> (6,4) move-\> (6,5) move-\> (6,6)*. It takes 10 moves. However, from (3,4) to (4,4) the agent takes the action "JUMP" witch takes 10 rewards. Therefore, the best reward is 100 - 10 - 9 = 81. Here is the Cumulative Rewards Table of level 3. The agent successfully finds the solution with the highest reward in level 3.Notice how towards the end the value converges to 81.
-<center><img src="images/level3optimalpath.jpg" title="lvl 3 optimal path" width="528" height="528" />
+<center><img src="images/level3optimalpath.png" title="lvl 3 optimal path" width="528" height="528" />
 <img src="images/Level3Eval.jpg" title="Cumulative Rewards Table lvl 3" width="528" height="528" /></center><br>
 
 
