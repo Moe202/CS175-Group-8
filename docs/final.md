@@ -16,8 +16,7 @@ title: Final
 Solve an intricate maze with traps, lava, etc. Optimize by trying to improve the time the agent solves the maze or by finding the most optimal path. The input of the project would require a section of the map the agent would traverse. Output would be the most optimal path discovered by the agent. Lastly, we assume that every block is unknown and the agent must discover each path. Direct applications of this project would allow users to optimally beat multiple video games. At a high level, reinforcement learning discovered from this project can determine the ideal behavior within the manufacturing, delivery, and finance industries.
 
 Different from what we proposed before, we added a new Level 0 to discover the relation between reward values and agent’s action. <br>
-Moreover, We also discard our level 5 since we found it was not necessary to add a zombie. The zombie does not affact what we want to study in this project. Instead, we made a larger and more complex map for level 4.<br>
-Now, agent can either Move 1 steps or Jump 2 steps.<br>
+Moreover, We also discard our level 5 since we found it was not necessary to add a zombie. The zombie does not affact what we want to study in this project. Instead, we made a larger and more complex map for level 4.Now, agent can either Move 1 steps or Jump 2 steps. In this kind of map, the traditional shorest path algorithm wouldn't work because of the complexity of the map and the number of actions. That is why we implemented reinforcement learning(eg. the Q-learning algorithm) in this project.<br>
 <br>
 Here is a brief description of our test environment:<br>
 
@@ -82,7 +81,7 @@ Currently, we have four maps, level 0 is based on level 1, level 2 is is based o
 The figures show the grid layouts in two-dimensional. The figures specify the start and end blocks. Also，the figures show the terrian of mazes(the floor of the maze is cobblestone, block is built by glass\_blocks, hill is built by cobblestone\_blocks). The number in each grids represent the **(x,z)** value and each grids has an altitude value which is  **y**.
 ###  Level 0:
 <img src="images/level0gridf.png" title="grid" width="427" height="301" /> <br>
-The level 0 map is a flat terrain with lava on eages. There is a lava river blocks agent way to reach the goal state. It is a 8x8x1(LxWxH) grid. This level was used to show how changing the cost of jumping forces the agent to choose one path over the other. The first optimal path to the goal involves jumping over the lava to reach the goal block, whereas the second optimal path only includes walking.<br>
+The level 0 map is a flat terrain with lava on eages. There is a lava river blocks agent way to reach the goal state. It is a 8x8x1(LxWxH) grid.  There are two agents in this level, agent1 must Jump to find the most optimal path. This level was used to show how changing the cost of jumping forces the agent to choose one path over the other. The first optimal path to the goal involves jumping over the lava to reach the goal block, whereas the second optimal path only includes walking.<br>
 __Reward for each actions for Agent 1:__
 For each action the agent makes, there is a reward value of -1 for each move, -10 for each jump, -100 for reaching the lava block, +300 for reaching the redstone\_block(goal state).<br>
 __Reward for each actions for Agent 2:__
@@ -145,7 +144,7 @@ one of the optimal path of level 0(agent2) is *(1,1) move-\> (2,1) move-\> (3,1)
 
 **Level3:** one of the optimal path of level 3 is *(1,1) move-\> (2,1) move-\> (2,2) move-\> (2,3) move-\> (3,3) moves-\> (3,4) jump-\> (4,4) move-\> (5,4) move-\> (6,4) move-\> (6,5) move-\> (6,6)*. It takes 10 moves. However, from (3,4) to (4,4) the agent takes the action "JUMP" witch takes 10 rewards. Therefore, the best reward is 100 - 10 - 9 = 81. Here is the Cumulative Rewards Table of level 3. The agent successfully finds the solution with the highest reward in level 3.Notice how towards the end the value converges to 81.
 <center><img src="images/level3optimalpath.png" title="lvl 3 optimal path" width="449" height="449" />
-<img src="images/Level3Eval.jpg" title="Cumulative Rewards lvl 3" width="449" height="5449" /></center><br>
+<img src="images/Level3Eval.jpg" title="Cumulative Rewards lvl 3" width="449" height="449" /></center><br>
 
 
 <br>
