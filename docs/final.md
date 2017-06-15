@@ -141,18 +141,18 @@ one of the optimal path of level 1 is *(1,1) moves-\> (1,2) moves-\> (1,3) moves
 <img src="images/Level1Eval.jpg" title="Cumulative Rewards lvl 1" width="345" height="345" /></center><br>
 
 **Level2:**  <br>
-one of the optimal path of level 2 is *(1,1) moves-\> (2,1) moves-\> (2,2) moves-\> (2,3) moves-\> (3,3) moves-\> (4,3) moves-\> (5,3) moves-\> (5,4) moves-\> (5,5) moves-\> (5,6) moves-\> (6,6)*. It also takes 10 moves. Therefore, the best reward we can get is 90. Here is the Cumulative Rewards Table of level 2. The agent successfully finds the solution with the highest reward in level 2.Notice how towards the end the value converges to 90.
+one of the optimal path of level 2 is *(1,1) moves-\> (2,1) moves-\> (2,2) moves-\> (2,3) moves-\> (3,3) moves-\> (4,3) moves-\> (5,3) moves-\> (5,4) moves-\> (5,5) moves-\> (5,6) moves-\> (6,6)*. It also takes 10 moves. Therefore, the best reward we can get is 90. The agent successfully finds the solution with the highest reward in level 2.Notice how towards the end the value converges to 90.
 <center><img src="images/level2optimalpath.png" title="lvl 2 optimal path" width="345" height="345" />
 <img src="images/Level2Eval.jpg" title="Cumulative Rewards lvl 2" width="345" height="345" /></center><br>
 
 **Level3:**  <br>
-one of the optimal path of level 3 is *(1,1) moves-\> (2,1) moves-\> (2,2) moves-\> (2,3) moves-\> (3,3) moves-\> (3,4) jumps-\> (4,4) moves-\> (5,4) moves-\> (6,4) moves-\> (6,5) moves-\> (6,6)*. It takes 10 actions. However, from (3,4) to (4,4) the agent takes the action "JUMP" witch takes 10 rewards. Therefore, the best reward is 100 - 10 - 9 = 81. Here is the Cumulative Rewards Table of level 3. The agent successfully finds the solution with the highest reward in level 3.Notice how towards the end the value converges to 81.
+one of the optimal path of level 3 is *(1,1) moves-\> (2,1) moves-\> (2,2) moves-\> (2,3) moves-\> (3,3) moves-\> (3,4) jumps-\> (4,4) moves-\> (5,4) moves-\> (6,4) moves-\> (6,5) moves-\> (6,6)*. It takes 10 actions. However, from (3,4) to (4,4) the agent takes the action "JUMP" witch takes 10 rewards. Therefore, the best reward is 100 - 10 - 9 = 81.  The evaluation graph shows how the agent successfully finds the solution with the highest reward. Notice how towards the end the value converges to 81.
 <center><img src="images/level3optimalpath.png" title="lvl 3 optimal path" width="345" height="345" />
 <img src="images/Level3Eval.jpg" title="Cumulative Rewards lvl 3" width="345" height="345" /></center><br>
 
 **Level4:**  <br>
 (In this level the reward of the goal block is 300)
-one of the optimal path of level 3 is *(1,1) moves-\> (1,2) moves-\> (1,3) moves-\> (2,3) moves-\> (2,4) jumps-\> (4,4) moves-\> (5,4) moves-\> (6,4) moves-\> (7,4) jumps-\> (9,4)*. It takes 9 actions(7 moves and 2 jumps. Therefore, the best reward is 300 - 10*2 - 7 = 273. Here is the Cumulative Rewards Table of level 3. The agent successfully finds the solution with the highest reward in level 4.Notice how towards the end the value converges to 273.
+one of the optimal path of level 3 is *(1,1) moves-\> (1,2) moves-\> (1,3) moves-\> (2,3) moves-\> (2,4) jumps-\> (4,4) moves-\> (5,4) moves-\> (6,4) moves-\> (7,4) jumps-\> (9,4)*. It takes 9 actions(7 moves and 2 jumps. Therefore, the best reward is 300 - 10*2 - 7 = 273.  The evaluation graph shows how the agent successfully finds the solution with the highest reward. Notice how towards the end the value converges to 273.
 <center><img src="images/level4optimalpath.png" title="lvl 4 optimal path" width="345" height="345" />
 <img src="images/Level4Eval.jpg" title="Cumulative Rewards lvl 4" width="345" height="345" /></center><br>
 
