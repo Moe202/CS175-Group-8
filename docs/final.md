@@ -19,11 +19,11 @@ Different from what we proposed before, we added a new Level 0 to discover the r
 Moreover, We also discard our level 5 since we found it was not necessary to add a zombie. The zombie does not affact what we want to study in this project. Instead, we made a larger and more complex map for level 4.<br>
 Now, agent can either move 1 steps or teleport 2 steps.
 
-Level 0: Flat terrain, with edge boundary and hazards, agent must Teleport to find the most optimal path (Actions: Walk, Teleport) <br>
-Level 1: Flat terrain, with edge boundary  (Actions: Walk, Jump)<br>
-Level 2: Flat terrain, with edge boundary and hazards in the middle of the map  (Actions: Walk, Jump)<br>
-Level 3: 3D terrain, hills, hazards, blocks  (Actions: Walk, Jump)<br>
-Level 4: 3D terrain, hills, hazards, blocks, a larger and more complex map  (Actions: Walk, Teleport)<br>
+__Level 0__: Flat terrain, with edge boundary and hazards, agent must Teleport to find the most optimal path (Actions: Walk, Teleport) <br>
+__Level 1__: Flat terrain, with edge boundary  (Actions: Walk, Jump)<br>
+__Level 2__: Flat terrain, with edge boundary and hazards in the middle of the map  (Actions: Walk, Jump)<br>
+__Level 3__: 3D terrain, hills, hazards, blocks  (Actions: Walk, Jump)<br>
+__Level 4__: 3D terrain, hills, hazards, blocks, a larger and more complex map  (Actions: Walk, Teleport)<br>
 
 <img src="images/level1mapfinal.png" title="level 1 map" width="280" height="280" /> <img src="images/level2mapfinal.png" title="level2mapfinal.png" width="280" height="280" /> <img src="images/level3mapfinal.png" title="level 3 map" width="280" height="280" /> <br>
 <img src="images/level4mapfinal.png" title="level 4 map" width="340" height="340" />
