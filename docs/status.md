@@ -3,8 +3,12 @@ layout: default
 title: Status
 ---
 
-# Video Summary:
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/9oUhCFZGrDc/0.jpg)](https://www.youtube.com/watch?v=9oUhCFZGrDc)
+# Video Summary
+<p align="center">
+<div id="video_frame">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/9oUhCFZGrDc" frameborder="0" allowfullscreen></iframe>
+</div>
+</p>
 
 
 
