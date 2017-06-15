@@ -171,10 +171,10 @@ In addition to plotting graphs, we decided to use a second method for **quantita
 * **The "Cliff Walking" example using Q-learning:** <https://www.youtube.com/watch?v=9XRL6d-yxp4>
 
 #### Images
-* <img src="images/redstone.jpeg" class="icon" /> **Redstone_block.jpeg:** [roblox](https://www.roblox.com/library/105562771/Redstone-Block-Front)
-* <img src="images/lapis.jpeg" class="icon" /> **Lapis_block.jpeg:** [roblox](https://www.roblox.com/library/53282639/lapis-lazuli-block)
-* <img src="images/gold.jpeg" class="icon" /> **Gold_block.jpeg:** [roblox](https://www.roblox.com/library/57409789/Gold-Block-Decal)
-* <img src="images/lava.jpeg" class="icon" /> **Lava_block.jpeg:** [roblox](https://www.roblox.com/library/67510430/Lava-block)
-* <img src="images/glass.png" class="icon" /> **Glass_block.png:** [Minecraft Modding](http://greyminecraftcoder.blogspot.com/2014/12/transparent-blocks-18.html)
-* <img src="images/cobble.png" class="icon" /> **Cobblestone_block.png:** [roblox](https://www.roblox.com/Minecraft-Cobblestone-Block-item?id=109593230)
-* <img src="images/agent.hpeg" class="icon" /> **agent.jpeg:** [Hannahevans Gallery](https://hannahevans.blog/program-flyer-gallery/)
+* <img src="images/redstone.jpeg" width="20" height="20"/> **Redstone_block.jpeg:** [roblox](https://www.roblox.com/library/105562771/Redstone-Block-Front)
+* <img src="images/lapis.jpeg" width="20" height="20" /> **Lapis_block.jpeg:** [roblox](https://www.roblox.com/library/53282639/lapis-lazuli-block)
+* <img src="images/gold.jpeg" width="20" height="20" /> **Gold_block.jpeg:** [roblox](https://www.roblox.com/library/57409789/Gold-Block-Decal)
+* <img src="images/lava.jpeg" width="20" height="20" /> **Lava_block.jpeg:** [roblox](https://www.roblox.com/library/67510430/Lava-block)
+* <img src="images/glass.png" width="20" height="20" /> **Glass_block.png:** [Minecraft Modding](http://greyminecraftcoder.blogspot.com/2014/12/transparent-blocks-18.html)
+* <img src="images/cobble.jpeg" width="20" height="20" /> **Cobblestone_block.jpeg:** [roblox](https://www.roblox.com/Minecraft-Cobblestone-Block-item?id=109593230)
+* <img src="images/agent.jpeg" width="20" height="20" /> **agent.jpeg:** [Hannahevans Gallery](https://hannahevans.blog/program-flyer-gallery/)
