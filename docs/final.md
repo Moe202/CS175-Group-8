@@ -82,7 +82,7 @@ We decided to give each state 8 initial Q Values where the first 4 values are 0 
 ### Test Environment
 
 #### Level 0:
-<img src="images/level0gridFinal.png" title="grid" width="434" height="434" />
+<img src="images/level0gridFinal.png" title="grid" width="400" height="400" />
 
 The level 0 map is a flat terrain with lava on eages. There is a lava river blocks agent way to reach the goal state. It is a 8x8x1(LxWxH) grid. This level was used to show how changing the cost of jumping forces the agent to choose one path over the other. The first optimal path to the goal involves jumping over the lava to reach the goal block, whereas the second optimal path only includes walking.
 #### Reward for each actions for Agent 1:
@@ -90,22 +90,22 @@ For each action the agent makes, there is a reward value of -1 for each move, -1
 #### Reward for each actions for Agent 2:
 For each action the agent makes, there is a reward value of -1 for each move, -301 for each jump, -100 for reaching the lava block, +300 for reaching the redstone\_block(goal state)
 
-####Level 1, Level 2, Level 3
+#### Level 1, Level 2, Level 3
 <img src="images/grid.jpeg" title="grid" width="1100" height="434" />
 
 The  Figure shows the grid layout in two-dimensional. It specify the start and end blocks. Also，it shows the terrian of mazes(the floor of the maze is cobblestone, block is built by glass\_blocks, hill is built by cobblestone\_blocks). The number in each grid represent the **(x,z)** value and each grids has an altitude value which is  **y**.
 
 Currently, we have three maps, each one is based on the previous one.
-##### Level 1:
+#### Level 1:
 The level 1 map is a flat terrain with lava on eages. It is a 8x8x1(LxWxH) grid. The agent start at the lapis\_block and try to reach the redstone\_block. The agent can either walk or jump. In level 1, there are () states and 2 actions
-##### Level 2:
+#### Level 2:
 The level 1 map is built based on Level 1 map. 5 cobble stone blocks in the middle of map were replaced by 5 lava blocks.It is a 8x8x1(LxWxH) grid. The agent start at the lapis\_block and try to reach the redstone\_block. The agent can either walk or jump. In level 2, there are () states and 2 actions
-##### Level 3:
+#### Level 3:
 Level 3 map was built based on level 2 map. A 2x2x2(LxWxH) glass block and a 2x2x1(LxWxH) cobble stone hill. Agent can jump over the cobble stone block(gold) but cannot jump over the glass block. The agent start at the lapis\_block and try to reach the redstone\_block. The agent can either walk or jump. In level 1, there are () states and 2 actions
 
 #### Level 4:
-The Level 4 map has the same concept as level 3 map but larger and more complex. It is a 11x11x3(LxWxH) grid. The first optimal path to the goal involves jumping over the lava to reach the goal block.
-<img src="images/level4gridFinal.png" title="grid" width="434" height="434" />
+The Level 4 map has the same concept as level 3 map but larger and more complex. It is a 11x11x3(LxWxH) grid. The first optimal path to the goal involves jumping over the lava to reach the goal block.<br>
+<img src="images/level4gridfinal.png" title="level4grid" width="400" height="400" />
 
 #### Reward for each actions(level 1,2,3,4):
 For each action the agent makes, there is a reward value of -1 for each move, -10 for each jump, -100 for reaching the lava block, +100 for reaching the redstone\_block(goal state)
