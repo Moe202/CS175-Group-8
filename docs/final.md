@@ -65,6 +65,11 @@ if not self.q_table.has_key(current_s):
 
 **Note:** Notice how each action costs 1 by default. We decided to creat an action\_cost array to add additional cost to specific actions. A 'jump' has an additional cost of 9 on top of the default cost of 1 whereas a 'move' has no added cost.
 
+### Level 0
+<img src="images/level0gridFinal.png" title="grid" width="1100" height="434" />
+
+This level was used to show how changing the cost of jumping forces the agent to choose one path over the other. The first optimal path to the goal involves jumping over the lava to reach the goal block, whereas the second optimal path only includes walking.
+
 ### The 3 Levels
 <img src="images/grid.jpeg" title="grid" width="1100" height="434" />
 
