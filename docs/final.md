@@ -7,11 +7,13 @@ title: Final
 </p>
 
 ## Video
+<center>
 <p align="center">
 <div id="video_frame">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/F1k1Qw6ZEIo" frameborder="0" allowfullscreen></iframe>
 </div>
 </p>
+</center>
 
 
 
@@ -40,7 +42,7 @@ __Level 4__: 3D terrain, hills, hazards, blocks, a larger and more complex map  
 For final report, our approach used the Q-Learning algorithm. Here is the equation of Q-Learning algorithm and our parameter set-up.<br>
 The Q-Learning equation:<br>
 
-<img src="images/eq.gif" title="equation" />
+<center><img src="images/eq.gif" title="equation" /></center>
 
 ```python
 self.epsilon = 0.01 # chance of taking a random action instead of the best
