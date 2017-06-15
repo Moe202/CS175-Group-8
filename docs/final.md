@@ -3,7 +3,7 @@ layout: default
 title: Final
 ---
 
-## Video Summary
+## Video
 <p align="center">
 <div id="video_frame">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/F1k1Qw6ZEIo" frameborder="0" allowfullscreen></iframe>
@@ -32,7 +32,7 @@ __Level 4__: 3D terrain, hills, hazards, blocks, a larger and more complex map  
 
 
 
-## 2.Approaches
+## Approaches
 
 For final report, our approach used the Q-Learning algorithm. Here is the equation of Q-Learning algorithm and our parameter set-up.<br>
 The Q-Learning equation:<br>
@@ -120,7 +120,7 @@ For each action the agent makes, there is a reward value of -1 for each move, -1
 
 
 
-## 3.Evaluation
+## Evaluation
 For **qualitative evaluation**, we evaluate our project by checking how well the agent can solve all 3 level mazes. We observe the agent when it is solving the maze to verify it works correctly. Also, we can check our agent by using the Cumulative Rewards Table.
 
 For **quantitative evaluation**, we plotted the reward values in a graph to see whether or not the reward found by the agent eventually converges near the optimal solution. We plotted the optimal solution as a dashed red line and the rewards found by the agent as a blue solid line.<br>
@@ -165,7 +165,7 @@ In addition to plotting graphs, we decided to use a second method for **quantita
 
 
 
-## 4.References
+## References
 * **Reinforcement Learning 3 - Q Learning:** <https://www.youtube.com/watch?v=1XRahNzA5bE&t=309s/>
 * **Wikipedia on Q Learning:** <https://en.wikipedia.org/wiki/Q-learning>
 * **The "Cliff Walking" example using Q-learning:** <https://www.youtube.com/watch?v=9XRL6d-yxp4>
@@ -177,4 +177,4 @@ In addition to plotting graphs, we decided to use a second method for **quantita
 * <img src="images/lava.jpeg" class="icon" /> **Lava_block.jpeg:** [roblox](https://www.roblox.com/library/67510430/Lava-block)
 * <img src="images/glass.png" class="icon" /> **Glass_block.png:** [Minecraft Modding](http://greyminecraftcoder.blogspot.com/2014/12/transparent-blocks-18.html)
 * <img src="images/cobble.png" class="icon" /> **Cobblestone_block.png:** [roblox](https://www.roblox.com/Minecraft-Cobblestone-Block-item?id=109593230)
-* <img src="images/agent.hpeg" class="icon" /> **agent.png:** [Hannahevans Gallery](https://hannahevans.blog/program-flyer-gallery/)
+* <img src="images/agent.hpeg" class="icon" /> **agent.jpeg:** [Hannahevans Gallery](https://hannahevans.blog/program-flyer-gallery/)
