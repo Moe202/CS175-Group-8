@@ -130,21 +130,21 @@ __Agent 1(-10 reward for each jump):__
 The optimal path of level 1(agent1) is *(1,1) move-\> (1,2) move-\> (1,3) move-\> (1,4) jump-\> (1,6)*. It takes 4 actions, 3 moves and a jump. Therefore, the best reward we can get is 100 - 3 - 9 = 88. The evaluation graph shows how the agent successfully finds the solution with the highest reward. Notice how towards the end the value converges to 88.<br>
 __Agent 2(-301 reward for each jump):__
 one of the optimal path of level 0(agent2) is *(1,1) move-\> (2,1) move-\> (3,1) move-\> (4,1) move-\> (5,1) move-\> (6,1) move-\> (6,2) move-\> (6,3) move-\> (6,4) move-\> (6,5) move-\> (6,6) move-\> (5,6) move-\> (4,6) move-\> (3,6) move-\> (2,6) move-\> (1,6)*. It takes 15 moves. Therefore, the best reward we can get is 85. The evaluation graph shows how the agent successfully finds the solution with the highest reward. Notice how towards the end the value converges to 85.
-<center><img src="images/level0optimalpath.png" title="lvl 0 optimal path" width="449" height="392" />
-<img src="images/Level0Agent1Eval.jpg" title="Cumulative Rewards lvl 0 agent1" width="392" height="392" />
-<img src="images/Level0Agent2Eval.jpg" title="Cumulative Rewards lvl 0 agent 2" width="392" height="392" /></center><br>
+<center><img src="images/level0optimalpath.png" title="lvl 0 optimal path" width="345" height="301" />
+<img src="images/Level0Agent1Eval.jpg" title="Cumulative Rewards lvl 0 agent1" width="345" height="345" />
+<img src="images/Level0Agent2Eval.jpg" title="Cumulative Rewards lvl 0 agent 2" width="345" height="345" /></center><br>
 
 **Level1:** one of the optimal path of level 1 is *(1,1) move-\> (1,2) move-\> (1,3) move-\> (1,4) move-\> (1,5) move-\> (1,6) move-\> (2,6) move-\> (3,6) move-\> (4,6) move-\> (5,6) move-\> (6,6)*. It takes 10 moves. Therefore, the best reward we can get is 90. The evaluation graph shows how the agent successfully finds the solution with the highest reward. Notice how towards the end the value converges to 90.
-<center><img src="images/level1optimalpath.png" title="lvl 1 optimal path" width="449" height="449" />
-<img src="images/Level1Eval.jpg" title="Cumulative Rewards lvl 1" width="449" height="449" /></center><br>
+<center><img src="images/level1optimalpath.png" title="lvl 1 optimal path" width="345" height="345" />
+<img src="images/Level1Eval.jpg" title="Cumulative Rewards lvl 1" width="345" height="345" /></center><br>
 
 **Level2:** one of the optimal path of level 2 is *(1,1) move-\> (2,1) move-\> (2,2) move-\> (2,3) move-\> (3,3) move-\> (4,3) move-\> (5,3) move-\> (5,4) move-\> (5,5) move-\> (5,6) move-\> (6,6)*. It also takes 10 moves. Therefore, the best reward we can get is 90. Here is the Cumulative Rewards Table of level 2. The agent successfully finds the solution with the highest reward in level 2.Notice how towards the end the value converges to 90.
-<center><img src="images/level2optimalpath.png" title="lvl 2 optimal path" width="449" height="449" />
-<img src="images/Level2Eval.jpg" title="Cumulative Rewards lvl 2" width="449" height="449" /></center><br>
+<center><img src="images/level2optimalpath.png" title="lvl 2 optimal path" width="345" height="345" />
+<img src="images/Level2Eval.jpg" title="Cumulative Rewards lvl 2" width="345" height="345" /></center><br>
 
 **Level3:** one of the optimal path of level 3 is *(1,1) move-\> (2,1) move-\> (2,2) move-\> (2,3) move-\> (3,3) moves-\> (3,4) jump-\> (4,4) move-\> (5,4) move-\> (6,4) move-\> (6,5) move-\> (6,6)*. It takes 10 moves. However, from (3,4) to (4,4) the agent takes the action "JUMP" witch takes 10 rewards. Therefore, the best reward is 100 - 10 - 9 = 81. Here is the Cumulative Rewards Table of level 3. The agent successfully finds the solution with the highest reward in level 3.Notice how towards the end the value converges to 81.
-<center><img src="images/level3optimalpath.png" title="lvl 3 optimal path" width="449" height="449" />
-<img src="images/Level3Eval.jpg" title="Cumulative Rewards lvl 3" width="449" height="449" /></center><br>
+<center><img src="images/level3optimalpath.png" title="lvl 3 optimal path" width="345" height="345" />
+<img src="images/Level3Eval.jpg" title="Cumulative Rewards lvl 3" width="345" height="345" /></center><br>
 
 
 <br>
