@@ -2,6 +2,9 @@
 layout: default
 title: Final
 ---
+<p align="center">
+<img src="images/logo.jpeg" title="logo" width="647" height="256"  />
+</p>
 
 ## Video
 <p align="center">
@@ -12,7 +15,7 @@ title: Final
 
 
 
-## 1.Project Summary
+## Project Summary
 Solve an intricate maze with traps, lava, etc. Optimize by trying to improve the time the agent solves the maze or by finding the most optimal path. The input of the project would require a section of the map the agent would traverse. Output would be the most optimal path discovered by the agent. Lastly, we assume that every block is unknown and the agent must discover each path. Direct applications of this project would allow users to optimally beat multiple video games. At a high level, reinforcement learning discovered from this project can determine the ideal behavior within the manufacturing, delivery, and finance industries.
 
 Different from what we proposed before, we added a new Level 0 to discover the relation between reward values and agent’s action. <br>
@@ -26,8 +29,8 @@ __Level 2__: Flat terrain, with edge boundary and hazards in the middle of the m
 __Level 3__: 3D terrain, hills, hazards, blocks  (Actions: Walk, Jump)<br>
 __Level 4__: 3D terrain, hills, hazards, blocks, a larger and more complex map  (Actions: Walk, Jump)<br>
 
-<img src="images/level1mapfinal.png" title="level 1 map" width="280" height="280" /> <img src="images/level2mapfinal.png" title="level2mapfinal.png" width="280" height="280" /> <img src="images/level3mapfinal.png" title="level 3 map" width="280" height="280" /> <br>
-<img src="images/level4mapfinal.png" title="level 4 map" width="340" height="340" />
+<center><img src="images/level1mapfinal.png" title="level 1 map" width="280" height="280" /> <img src="images/level2mapfinal.png" title="level2mapfinal.png" width="280" height="280" /> <img src="images/level3mapfinal.png" title="level 3 map" width="280" height="280" /> <br>
+<img src="images/level4mapfinal.png" title="level 4 map" width="340" height="340" /></center>
 
 
 
@@ -127,9 +130,9 @@ For **quantitative evaluation**, we plotted the reward values in a graph to see 
 
 * **Level0:** <br>
 (In this level the reward of the goal block is 300) <br>
-__Agent 1(-10 reward for each jump):__
+* __Agent 1 (-10 reward for each jump):__
 The optimal path of level 1(agent1) is *(1,1) moves-\> (1,2) moves-\> (1,3) moves-\> (1,4) jumps-\> (1,6)*. It takes 4 actions, 3 moves and 1 jump. Therefore, the best reward we can get is 300 - 3 - 10 = 287. The evaluation graph shows how the agent successfully finds the solution with the highest reward. Notice how towards the end the value converges to 287.<br>
-__Agent 2(-301 reward for each jump):__
+* __Agent 2 (-301 reward for each jump):__
 One of the optimal path of level 0(agent2) is *(1,1) moves-\> (2,1) moves-\> (3,1) moves-\> (4,1) moves-\> (5,1) moves-\> (6,1) moves-\> (6,2) moves-\> (6,3) moves-\> (6,4) moves-\> (6,5) moves-\> (6,6) moves-\> (5,6) moves-\> (4,6) moves-\> (3,6) moves-\> (2,6) moves-\> (1,6)*. It takes 15 actions. Therefore, the best reward we can get is 285. The evaluation graph shows how the agent successfully finds the solution with the highest reward. Notice how towards the end the value converges to 285.
 <center><img src="images/level0optimalpath.png" title="lvl 0 optimal path" width="345" height="301" />
 <img src="images/Level0Agent1Eval.jpg" title="Cumulative Rewards lvl 0 agent1" width="345" height="345" />
@@ -159,8 +162,13 @@ The optimal path of level 3 is *(1,1) moves-\> (1,2) moves-\> (1,3) moves-\> (2,
 
 
 <br>
-* In addition to plotting graphs, we decided to use a second method for **quantitative evaluation**. We evaluate our project by checking how long it takes the agent to solve each mazes. That is, we want the agent to slove the maze as quick as it can. We use the Cumulative Rewards Table to check how many runs it takes before getting the best reward. In the most recent test, the agent needs 44 runs in level 1, 56 runs in level 2 and 104 runs in level 3. We hope we can improve this by changing our reward function and Q-Learning parameter. We want to see how changes on these parameter can affect agent's performance.<br>
-
+* In addition to plotting graphs, we decided to use a second method for **quantitative evaluation**. We evaluated our project by checking how long it takes the agent to solve each mazes. That is, we wanted the agent to slove the maze as quick as it can. We used the Cumulative Rewards Table to check how many runs it takes before getting the best reward. The best result we got so far is, the agent 1 needs 48 runs in level 0, the agnet 2 needs 135 runs in level 0, the agent 1 needs 44 runs in level 1, 56 runs in level 2, 104 runs in level 3 and 251 runs in level 4. We improved this by changing our reward function and Q-Learning parameter. We wanted to see how changes on these parameter can affect agent's performance. Therefore, we tested the agent's performance with different parameter sets(total: 80 combinations). The test was based on level 1(we were plannning to get data from level2,3,4 also, however, it took a long time to get all the data. Therefore, we only got data from level 1).<br>
+```python
+elist = [0.01,0.1,0.3,0.5] #list of epsilon, 4 values
+alist = [0.05,0.1,0.5,0.75,1] #list of alpha, 5 values
+glist = [0.25,0.5,0.75,1] #list of gamma, 4 values
+```
+For each of the combinations, we plotted a graph. We also plotted 
 <center><img src="images/trialtable.jpeg" title="trials table" width="670" height="120" /></center><br>
 
 
