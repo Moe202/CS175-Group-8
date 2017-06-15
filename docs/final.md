@@ -4,7 +4,7 @@ title: Final
 ---
 
 # Video Summary:
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/9oUhCFZGrDc/0.jpg)](https://www.youtube.com/watch?v=9oUhCFZGrDc)
+[![IMAGE ALT TEXT HERE][image-1]][1]
 
 
 
@@ -12,19 +12,22 @@ title: Final
 # 1.Project Summary
 Solve an intricate maze with traps, lava, etc. Optimize by trying to improve the time the agent solves the maze or by finding the most optimal path. The input of the project would require a section of the map the agent would traverse. Output would be the most optimal path discovered by the agent. Lastly, we assume that every block is unknown and the agent must discover each path. Direct applications of this project would allow users to optimally beat multiple video games. At a high level, reinforcement learning discovered from this project can determine the ideal behavior within the manufacturing, delivery, and finance industries.
 
-Level 1: Flat terrain, with edge boundary  (Actions: Walk, Jump)<br>
-Level 2: Flat terrain, with edge boundary and hazards in the middle of the map  (Actions: Walk, Jump)<br>
-Level 3: 3D terrain, hills, hazards, blocks  (Actions: Walk, Jump)<br>
-Level 4: 3D terrain, hills, hazards, blocks  (Actions: Walk, Jump, Timed Jump)<br>
-Level 5: Moonshot case- 3D terrain, hills, hazards, blocks and zombies  (Actions: Walk, Jump, Timed Jump)<br>
+Level 0: Flat terrain, with edge boundary and hazards, agent must Teleport to find the most optimal path (Actions: Walk, Teleport)
+Level 1: Flat terrain, with edge boundary  (Actions: Walk, Teleport)<br>
+Level 2: Flat terrain, with edge boundary and hazards in the middle of the map  (Actions: Walk, Teleport)<br>
+Level 3: 3D terrain, hills, hazards, blocks  (Actions: Walk, Teleport)<br>
+Level 4: 3D terrain, hills, hazards, blocks, a larger and more complex map  (Actions: Walk, Teleport)<br>
 
-<img src="images/level1.jpeg" title="level 1 map" width="280" height="280" /> <img src="images/level2.jpeg" title="level 2 map" width="280" height="280" /> <img src="images/level3.jpeg" title="level 3 map" width="280" height="280" />
+Different from what we proposed before, we added a new Level 0 to discover the relation between reward values and agent’s action, moreover, we made a larger and more complex map for level 4. Now, agent can either move 1 steps or teleport 2 steps.
+
+
+<img src="images/level1mapfinal.png" title="level 1 map" width="280" height="280" /> <img src="images/level2.jpeg" title="level2mapfinal.png" width="280" height="280" /> <img src="images/level3mapfinal.png" title="level 3 map" width="280" height="280" /> \<img src="images/level4mapfinal.png" title="level 4 map" width="280" height="280" /\>
 
 
 
 # 2.Approach
 
-For progress report, our approach used the Q-Learning algorithm. Here is the equation of Q-Learning algorithm and our parameter set-up.<br>
+For final report, our approach used the Q-Learning algorithm. Here is the equation of Q-Learning algorithm and our parameter set-up.<br>
 The Q-Learning equation:<br>
 
 <img src="images/eq.gif" title="equation" />
@@ -54,7 +57,7 @@ if not self.q_table.has_key(current_s):
 
 **Initial Q Values** We decided to give each state 8 initial Q Values where the first 4 values are 0 and the last 4 are -2. These values were set to make the agent prefer walking over jumping initially until walking's Q value drops to -2.
 
-**Note:** Notice how each action costs 1 by default. We decided to creat an action_cost array to add additional cost to specific actions. A 'jump' has an additional cost of 9 on top of the default cost of 1 whereas a 'move' has no added cost.
+**Note:** Notice how each action costs 1 by default. We decided to creat an action\_cost array to add additional cost to specific actions. A 'jump' has an additional cost of 9 on top of the default cost of 1 whereas a 'move' has no added cost.
 
 ### The 3 Levels
 <img src="images/grid.jpeg" title="grid" width="1100" height="434" />
@@ -82,15 +85,15 @@ For each action the agent makes, there is a reward value of -1 for each move, -1
 # 3.Evaluation
 For **qualitative evaluation**, we evaluate our project by checking how well the agent can solve all 3 level mazes. We observe the agent when it is solving the maze to verify it works correctly. Also, we can check our agent by using the Cumulative Rewards Table.<br>
 
-**Level1:** one of the optimal path of level 1 is *(1,1) move-> (1,2) move-> (1,3) move-> (1,4) move-> (1,5) move-> (1,6) move-> (2,6) move-> (3,6) move-> (4,6) move-> (5,6) move-> (6,6)*. It takes 10 moves. Therefore, the best reward we can get is 90. The Cumulative Rewards Table shows how the agent successfully finds the solution with the highest reward.
+**Level1:** one of the optimal path of level 1 is *(1,1) move-\> (1,2) move-\> (1,3) move-\> (1,4) move-\> (1,5) move-\> (1,6) move-\> (2,6) move-\> (3,6) move-\> (4,6) move-\> (5,6) move-\> (6,6)*. It takes 10 moves. Therefore, the best reward we can get is 90. The Cumulative Rewards Table shows how the agent successfully finds the solution with the highest reward.
 
 <center><img src="images/crt1.jpeg" title="Cumulative Rewards Table lvl 1" width="528" height="162.4" align="middle" /></center><br>
 
-**Level2:** one of the optimal path of level 2 is *(1,1) move-> (2,1) move-> (2,2) move-> (2,3) move-> (3,3) move-> (4,3) move-> (5,3) move-> (5,4) move-> (5,5) move-> (5,6) move-> (6,6)*. It also takes 10 moves. Therefore, the best reward we can get is 90. Here is the Cumulative Rewards Table of level 2. The agent successfully finds the solution with the highest reward in level 2.
+**Level2:** one of the optimal path of level 2 is *(1,1) move-\> (2,1) move-\> (2,2) move-\> (2,3) move-\> (3,3) move-\> (4,3) move-\> (5,3) move-\> (5,4) move-\> (5,5) move-\> (5,6) move-\> (6,6)*. It also takes 10 moves. Therefore, the best reward we can get is 90. Here is the Cumulative Rewards Table of level 2. The agent successfully finds the solution with the highest reward in level 2.
 
 <center><img src="images/crt2.jpeg" title="Cumulative Rewards Table lvl 2" width="528" height="162.4" align="middle" /></center><br>
 
-**Level3:** one of the optimal path of level 3 is *(1,1) move-> (2,1) move-> (2,2) move-> (2,3) move-> (3,3) moves-> (3,4) jump-> (4,4) move-> (5,4) move-> (6,4) move-> (6,5) move-> (6,6)*. It takes 10 moves. However, from (3,4) to (4,4) the agent takes the action "JUMP" witch takes 10 rewards. Therefore, the best reward is 100 - 10 - 9 = 81. Here is the Cumulative Rewards Table of level 3. The agent successfully finds the solution with the highest reward in level 3.
+**Level3:** one of the optimal path of level 3 is *(1,1) move-\> (2,1) move-\> (2,2) move-\> (2,3) move-\> (3,3) moves-\> (3,4) jump-\> (4,4) move-\> (5,4) move-\> (6,4) move-\> (6,5) move-\> (6,6)*. It takes 10 moves. However, from (3,4) to (4,4) the agent takes the action "JUMP" witch takes 10 rewards. Therefore, the best reward is 100 - 10 - 9 = 81. Here is the Cumulative Rewards Table of level 3. The agent successfully finds the solution with the highest reward in level 3.
 
 <center><img src="images/crt3.jpeg" title="Cumulative Rewards Table lvl 3" width="528" height="162.4" align="middle"/></center><br>
 
@@ -107,3 +110,7 @@ In terms of **quantitative evaluation**, we evaluate our project by checking how
 # 4.Remaining Goals and Challenges
 For the rest of weeks, we will add a “timed jump” which means the agent can either jump 1 blocks or 2-3 blocks. This will occur in level 4. It will be interesting to discover how the agent will perform when we add more uncertainty into the map and how we can improve its performance by adjusting our parameter values(reward values, learning rate, discount rate, etc.). Moreover, we plan to add nondeterministic actions into our project. For example, the agent may have a 20% probability of jumping left as opposed to walking left, obviously with respective reward factors for each action.
 Also, by level 5, our moonshot case, we will add zombies that will patrol the map and force the agent to perform zombie avoidance. This will add more actions to our project. Some challenges we faced while solving our three levels was being able to find an optimal path within 150 trials. This took many attempts at adjusting our Q-learning algorithm and by assigning a very large reward factor towards jumping. We did this because our agent would continually try to jump on the level 1 map, which did not require jumping to be solved optimally. Given our experience so far, so challenges we will face in the future are implementing more actions into our project and performing zombie avoidance. We plan to adjust our reward values accordingly and improve upon our Q-Learning algorithm to solve an optimal path with minimal trials. If the project proceeds as planned our team should be able to solve a level 5 map on a moderate to large scale.<br>
+
+[1]:	https://www.youtube.com/watch?v=9oUhCFZGrDc
+
+[image-1]:	https://img.youtube.com/vi/9oUhCFZGrDc/0.jpg
