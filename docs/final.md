@@ -17,13 +17,14 @@ Solve an intricate maze with traps, lava, etc. Optimize by trying to improve the
 
 Different from what we proposed before, we added a new Level 0 to discover the relation between reward values and agent’s action, moreover, we made a larger and more complex map for level 4. Now, agent can either move 1 steps or teleport 2 steps.
 
-Level 0: Flat terrain, with edge boundary and hazards, agent must Teleport to find the most optimal path (Actions: Walk, Teleport)
+Level 0: Flat terrain, with edge boundary and hazards, agent must Teleport to find the most optimal path (Actions: Walk, Teleport) <br>
 Level 1: Flat terrain, with edge boundary  (Actions: Walk, Teleport)<br>
 Level 2: Flat terrain, with edge boundary and hazards in the middle of the map  (Actions: Walk, Teleport)<br>
 Level 3: 3D terrain, hills, hazards, blocks  (Actions: Walk, Teleport)<br>
 Level 4: 3D terrain, hills, hazards, blocks, a larger and more complex map  (Actions: Walk, Teleport)<br>
 
-<img src="images/level1.jpeg" title="level 1 map" width="280" height="280" /> <img src="images/level2.jpeg" title="level 2 map" width="280" height="280" /> <img src="images/level3.jpeg" title="level 3 map" width="280" height="280" />
+<img src="images/level1mapfinal.png" title="level 1 map" width="280" height="280" /> <img src="images/level2.jpeg" title="level2mapfinal.png" width="280" height="280" /> <img src="images/level3mapfinal.png" title="level 3 map" width="280" height="280" /> <img src="images/level4mapfinal.png" title="level 4 map" width="280" height="280" /\>
+
 
 
 
