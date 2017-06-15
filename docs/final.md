@@ -69,6 +69,10 @@ if not self.q_table.has_key(current_s):
 <img src="images/level0gridFinal.png" title="grid" width="434" height="434" />
 
 This level was used to show how changing the cost of jumping forces the agent to choose one path over the other. The first optimal path to the goal involves jumping over the lava to reach the goal block, whereas the second optimal path only includes walking.
+#### Reward for each actions for Agent 1:
+For each action the agent makes, there is a reward value of -1 for each move, -10 for each jump, -100 for reaching the lava block, +300 for reaching the redstone\_block(goal state).
+#### Reward for each actions for Agent 2:
+For each action the agent makes, there is a reward value of -1 for each move, -301 for each jump, -100 for reaching the lava block, +300 for reaching the redstone\_block(goal state)
 
 ### The 3 Levels
 <img src="images/grid.jpeg" title="grid" width="1100" height="434" />
