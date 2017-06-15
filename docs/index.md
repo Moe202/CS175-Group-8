@@ -18,7 +18,7 @@ Level 3: 3D terrain, hills, hazards, blocks (Actions: Walk, Teleport) <br>
 Level 4: 3D terrain, hills, hazards, blocks, a larger and more complex map (Actions: Walk, Teleport) <br>  
 
 
-<img src="images/level1mapfinal.png" title="level 1 map" width="280" height="280" /> <img src="images/level2.jpeg" title="level2mapfinal.png" width="280" height="280" /> <img src="images/level3mapfinal.png" title="level 3 map" width="280" height="280" /> <img src="images/level4mapfinal.png" title="level 4 map" width="280" height="280" /\>
+<img src="images/level1mapfinal.png" title="level 1 map" width="280" height="280" /> <img src="images/level2.jpeg" title="level2mapfinal.png" width="280" height="280" /> <img src="images/level3mapfinal.png" title="level 3 map" width="280" height="280" /> <img src="images/level4mapfinal.png" title="level 4 map" width="280" height="280" />
 
 
 ### Video Summary
