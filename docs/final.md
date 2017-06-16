@@ -92,13 +92,13 @@ We decided to give each state 8 initial Q Values where the first 4 values are 0 
 
 **Advantages of Q-Learning**   
 -- Allows the agent to perform exploration and take new action with unknown consequences  
--- Allows the agent to potential retrieve a more accurate model of the environment    
+-- Allows the agent to potentially retrieve a more accurate model of the environment    
 -- Discover higher-reward states than the ones already found    
 
 **Disadvantages of Q-Learning**   
 -- While performing exploration, you may not necessarily reach a higher reward state (something bad could happen)  
--- Exploration takes multiple trials and could potential drain your available computational resources  
--- Too high of a epsilon value(random action) may prevent you from discovering a truly optimal strategy.   
+-- Exploration takes multiple trials and could potentially drain your available computational resources  
+-- Too high of an epsilon value(random action) may prevent you from discovering a truly optimal strategy.   
 
 
 ### Test Environment:
@@ -147,7 +147,7 @@ For each action the agent makes, there is a reward value of -1 for each move, -1
 
 
 ## Evaluation
-For **qualitative evaluation**, we evaluate our project by checking how well the agent can solve all 3 level mazes. We observe the agent when it is solving the maze to verify it works correctly. Also, we can check our agent by using the Cumulative Rewards Table.
+For **qualitative evaluation**, we evaluate our project by checking how well the agent can solve all 4 level mazes. We observe the agent when it is solving the maze to verify it works correctly. Also, we can check our agent by using the Cumulative Rewards Table.
 
 For **quantitative evaluation**, we plotted the reward values in a graph to see whether or not the reward found by the agent eventually converges near the optimal solution. We plotted the optimal solution as a dashed red line and the rewards found by the agent as a blue solid line.<br>
 
