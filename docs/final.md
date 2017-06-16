@@ -101,7 +101,7 @@ We decided to give each state 8 initial Q Values where the first 4 values are 0 
 * Too high of an epsilon value(random action) may prevent you from discovering a truly optimal strategy.   
 
 
-### Test Environments(maps):
+### Test Environments/Maps:
 Currently, we have five maps, level 0 is based on level 1, level 2 is is based on level 1, level 3 is based on level 3, level 4 based on level 3.
 The figures show the grid layouts in two-dimensional. The figures specify the start and end blocks. Also，the figures show the terrian of mazes(the floor of the maze is cobblestone, block is built by glass\_blocks, hill is built by cobblestone\_blocks). The number in each grids represent the **(x,z)** value and each grids has an altitude value which is  **y**.
 ###  Level 0:
