@@ -90,16 +90,16 @@ We decided to give each state 8 initial Q Values where the first 4 values are 0 
 
 **Note:** Notice how each action costs 1 by default. We decided to create an action\_cost array to add additional cost to specific actions. A 'jump' has an additional cost of 9 on top of the default cost of 1 whereas a 'move' has no added cost.
 
-**Advantages of Q-Learning**
+**Advantages of Q-Learning**   
 -- Allows the agent to perform exploration and take new action with unknown consequences  
 -- Allows the agent to potential retrieve a more accurate model of the environment    
 -- Discover higher-reward states than the ones already found    
 
-**Disadvantages of Q-Learning**
+**Disadvantages of Q-Learning**   
 -- While performing exploration, you may not necessarily reach a higher reward state (something bad could happen)  
 -- Exploration takes multiple trials and could potential drain your available computational resources  
 -- Too high of a epsilon value(random action) may prevent you from discovering a truly optimal strategy.   
- 
+
 
 ### Test Environment:
 Currently, we have four maps, level 0 is based on level 1, level 2 is is based on level 1, level 3 is based on level 3, level 4 based on level 3
