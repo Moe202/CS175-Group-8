@@ -85,17 +85,17 @@ glist = [0.25,0.5,0.75,1] #list of gamma, 4 values
 ```
 For each of the combinations, we plotted a graph. We find out alpha = 0.1, gamma = 1.0 and epsilon = 0.01 fits all of our maps. A large alpha value(0.75) and gamma value(0.75) will let the agent find the best reward sooner in a simple map(level 1) but it will not work in a very complex map(level 4).<br>
 
-**Initial Q Values** <br>
+**Initial Q Values:** <br>
 We decided to give each state 8 initial Q Values where the first 4 values are 0 and the last 4 are -2. These values were set to make the agent prefer walking over jumping initially until walking's Q value drops to -2. This was only used for levels 1, 2, 3.
 
 **Note:** Notice how each action costs 1 by default. We decided to create an action\_cost array to add additional cost to specific actions. A 'jump' has an additional cost of 9 on top of the default cost of 1 whereas a 'move' has no added cost.
 
-**Advantages of Q-Learning**   
+**Advantages of Q-Learning:**   
 * Allows the agent to perform exploration and take new action with unknown consequences.  
 * Allows the agent to potentially retrieve a more accurate model of the environment.    
 * Discover higher-reward states than the ones already found.   
 
-**Disadvantages of Q-Learning**   
+**Disadvantages of Q-Learning:**   
 * While performing exploration, you may not necessarily reach a higher reward state (something bad could happen).  
 * Exploration takes multiple trials and could potentially drain your available computational resources.
 * Too high of an epsilon value(random action) may prevent you from discovering a truly optimal strategy.   
