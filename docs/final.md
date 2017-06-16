@@ -101,17 +101,18 @@ For each action the agent makes, there is a reward value of -1 for each move, -1
 * __Reward for each actions for Agent 2:__
 For each action the agent makes, there is a reward value of -1 for each move, -301 for each jump, -100 for reaching the lava block, +300 for reaching the redstone\_block(goal state)<br>
 
-Currently, we have three maps, each one is based on the previous one.
 ###  Level 1:
 <img src="images/level1gridf.png" title="grid" width="426" height="297" /> <br>
 * The level 1 map is a flat terrain with lava on eages. It is a 8x8x1(LxWxH) grid. The agent start at the lapis\_block and try to reach the redstone\_block. The agent can either walk or jump. In level 1, there are 64 states and 8 actions.<br>
 * __Reward for each actions:__
 For each action the agent makes, there is a reward value of -1 for each move, -10 for each jump, -100 for reaching the lava block, +100 for reaching the redstone\_block(goal state)<br>
+
 ###  Level 2:
 <img src="images/level2gridf.png" title="grid" width="426" height="292" /> <br>
 * The level 1 map is built based on Level 1 map. 5 cobble stone blocks in the middle of map were replaced by 5 lava blocks.It is a 8x8x1(LxWxH) grid. The agent start at the lapis\_block and try to reach the redstone\_block. The agent can either walk or jump. In level 2, there are 64 states and 8 actions.<br>
 * __Reward for each actions:__
 For each action the agent makes, there is a reward value of -1 for each move, -10 for each jump, -100 for reaching the lava block, +100 for reaching the redstone\_block(goal state)<br>
+
 ### Level 3:
 <img src="images/level3gridf.png" title="grid" width="434" height="353" /> <br>
 * Level 3 map was built based on level 2 map. A 2x2x2(LxWxH) glass block and a 2x2x1(LxWxH) cobble stone hill. Agent can jump over the cobble stone block(gold) but cannot jump over the glass block. The agent start at the lapis\_block and try to reach the redstone\_block. The agent can either walk or jump. In level 3, there are 64 states and 8 actions.<br>
