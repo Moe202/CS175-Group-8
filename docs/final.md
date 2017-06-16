@@ -51,7 +51,7 @@ self.gamma = 1.0 # discount rate
 
 # Set of actions
 self.actions = ["movewest 1", "moveeast 1", "movenorth 1", "movesouth 1", "tpn", "tps", "tpe", "tpw"]
-# Additional action costs to take into account (Each action costs 1 by default). 
+# Additional action costs to take into account (Each action costs 1 by default).
 # Action cost = 1 + self.action_cost[i]
 ```
 ```python
@@ -67,7 +67,7 @@ self.action_cost = [0, 0, 0, 0, 300, 300, 300, 300]
 if not self.q_table.has_key(current_s):
   self.q_table[current_s] = [0, 0, 0, 0, -2, -2, -2, -2]
  ```
-  
+
 **Learning Rate:** <br>
 Alpha represents the learning rate. It is value between 0 and 1 ( 0 \< a \< 1). It indicates how much the utility values will be updated every time the agent takes an action. alpha = 0 means the agent will not learn anything. alpha = 1 means the agent will not consider any feature states (the agent only consider most recent information). In stochastic environment, alpha is preferable closer to 0 than 1. In our approach, we decide alpha value to be 0.1<br><br>
 **Discount Factor:** <br>
@@ -75,20 +75,31 @@ Gamma is the discount factor. It determines the importance of future information
 **Random Action:** Epsilon is the possibility of taking a random action instead of the best one.<br><br>
 **Immediate Reward Value:** r is the immediate reward value. <br><br>
 **Max Q Value:** The action has the highest utility value in next state will become the new Q value of that states. <br>
- 
+
 __The reason we chose this parameter set:__<br>
-We changed these parameter to see the effects on agent's performance. We tested the agent's performance with different parameter sets(total: 80 combinations). The test was based on level 1(we were plannning to get data from level2,3,4 also, however, it took a long time to get all the data. Therefore, we only got data from level 1).<br>
+We changed these parameter to see the effects on agent's performance. We tested the agent's performance with different parameter sets(total: 80 combinations). The test was based on level 1(we were planning to get data from level2,3,4 also, however, it took a long time to get all the data. Therefore, we only got data from level 1).<br>
 ```python
 elist = [0.01,0.1,0.3,0.5] #list of epsilon, 4 values
 alist = [0.05,0.1,0.5,0.75,1] #list of alpha, 5 values
 glist = [0.25,0.5,0.75,1] #list of gamma, 4 values
 ```
-For each of the combinations, we plotted a graph. We find out alpha = 0.1, gama = 1.0 and epsilon = 0.01 fits all of our maps. A large alpha value(0.75) and gamma value(0.75) will let the agent find the best reward sooner in a simple map(level 1) but it will not work in a very complex map(level 4).<br> 
+For each of the combinations, we plotted a graph. We find out alpha = 0.1, gamma = 1.0 and epsilon = 0.01 fits all of our maps. A large alpha value(0.75) and gamma value(0.75) will let the agent find the best reward sooner in a simple map(level 1) but it will not work in a very complex map(level 4).<br>
 
 **Initial Q Values** <br>
 We decided to give each state 8 initial Q Values where the first 4 values are 0 and the last 4 are -2. These values were set to make the agent prefer walking over jumping initially until walking's Q value drops to -2. This was only used for levels 1, 2, 3.
 
-**Note:** Notice how each action costs 1 by default. We decided to creat an action\_cost array to add additional cost to specific actions. A 'jump' has an additional cost of 9 on top of the default cost of 1 whereas a 'move' has no added cost.
+**Note:** Notice how each action costs 1 by default. We decided to create an action\_cost array to add additional cost to specific actions. A 'jump' has an additional cost of 9 on top of the default cost of 1 whereas a 'move' has no added cost.
+
+**Advantages of Q-Learning**
+-- Allows the agent to perform exploration and take new action with unknown consequences  
+-- Allows the agent to potential retrieve a more accurate model of the environment    
+-- Discover higher-reward states than the ones already found    
+
+**Disadvantages of Q-Learning**
+-- While performing exploration, you may not necessarily reach a higher reward state (something bad could happen)  
+-- Exploration takes multiple trials and could potential drain your available computational resources  
+-- Too high of a epsilon value(random action) may prevent you from discovering a truly optimal strategy.   
+ 
 
 ### Test Environment:
 Currently, we have four maps, level 0 is based on level 1, level 2 is is based on level 1, level 3 is based on level 3, level 4 based on level 3
