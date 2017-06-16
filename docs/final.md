@@ -107,9 +107,9 @@ The figures show the grid layouts in two-dimensional. The figures specify the st
 ###  Level 0:
 <img src="images/level0gridf.png" title="grid" width="427" height="301" /> <br>
 * The level 0 map is a flat terrain with lava on eages. There is a lava river blocks agent way to reach the goal state. It is a 8x8x1(LxWxH) grid.  There are two agents in this level, agent1 must Jump to find the most optimal path. This level was used to show how changing the cost of jumping forces the agent to choose one path over the other. The first optimal path to the goal involves jumping over the lava to reach the goal block, whereas the second optimal path only includes walking. In level 1, there are 64 states and 8 actions.<br>
-__Reward for each actions for Agent 1:__
+* __Reward for each actions for Agent 1:__
 For each action the agent makes, there is a reward value of -1 for each move, -10 for each jump, -100 for reaching the lava block, +300 for reaching the redstone\_block(goal state).<br>
-__Reward for each actions for Agent 2:__
+* __Reward for each actions for Agent 2:__
 For each action the agent makes, there is a reward value of -1 for each move, -301 for each jump, -100 for reaching the lava block, +300 for reaching the redstone\_block(goal state)<br>
 
 ###  Level 1:
