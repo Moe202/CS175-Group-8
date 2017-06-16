@@ -194,6 +194,7 @@ The optimal path of level 3 is *(1,1) moves-\> (1,2) moves-\> (1,3) moves-\> (2,
 * **Reinforcement Learning 3 - Q Learning:** <https://www.youtube.com/watch?v=1XRahNzA5bE&t=309s/>
 * **Wikipedia on Q Learning:** <https://en.wikipedia.org/wiki/Q-learning>
 * **The "Cliff Walking" example using Q-learning:** <https://www.youtube.com/watch?v=9XRL6d-yxp4>
+* **Tutorial 6 From Malmo References**
 
 #### Images
 * <img src="images/redstone.jpeg" width="20" height="20"/> **Redstone_block.jpeg:** [roblox](https://www.roblox.com/library/105562771/Redstone-Block-Front)
