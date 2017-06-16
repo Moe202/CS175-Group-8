@@ -185,7 +185,7 @@ The optimal path of level 3 is *(1,1) moves-\> (1,2) moves-\> (1,3) moves-\> (2,
 
 
 <br>
-* In addition to plotting graphs, we decided to use a second method for **quantitative evaluation**. We evaluated our project by checking how long it takes the agent to solve each mazes. That is, we wanted the agent to slove the maze as quick as it can. We used the Cumulative Rewards Table to check how many runs it takes before getting the best reward. The best result we got so far is, the agent 1 needs 48 runs in level 0, the agnet 2 needs 135 runs in level 0, the agent 1 needs 44 runs in level 1, 56 runs in level 2, 104 runs in level 3 and 251 runs in level 4. We improved this by changing our reward function and Q-Learning parameter. <br>
+* In addition to plotting graphs, we decided to use a second method for **quantitative evaluation**. We evaluated our project by checking how long it takes the agent to solve each mazes. That is, we wanted the agent to slove the maze as quick as it can. We used the Cumulative Rewards Table to check how many runs it takes before getting the best reward. The best result we got so far is, the agent 1 needs 48 runs in level 0, the agnet 2 needs 135 runs in level 0, the agent 1 needs 44 runs in level 1, 56 runs in level 2, 104 runs in level 3 and 251 runs in level 4. We improved this by changing our reward function and Q-Learning parameters. <br>
 <center><img src="images/trialtable.jpeg" title="trials table" width="670" height="120" /></center><br>
 
 
