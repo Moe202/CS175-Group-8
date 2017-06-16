@@ -121,7 +121,7 @@ For each action the agent makes, there is a reward value of -1 for each move, -1
 
 ### Level 4:
 <img src="images/level4gridf.png" title="grid" width="524" height="393" /> <br>
-* The Level 4 map has the same concept as level 3 map but larger and more complex. It is a 11x11x3(LxWxH) grid. The first optimal path to the goal involves jumping over the lava to reach the goal block. In level 3, there are 121 states and 8 actions.<br>
+* The Level 4 map has the same concept as level 3 map but larger and more complex. It is a 11x11x3(LxWxH) grid. The first optimal path to the goal involves jumping over the lava to reach the goal block. This map can evaluate the agent's ability to solve a complex problem. In level 3, there are 121 states and 8 actions.<br>
 * __Reward for each actions:__
 For each action the agent makes, there is a reward value of -1 for each move, -10 for each jump, -100 for reaching the lava block, +100 for reaching the redstone\_block(goal state)
 
