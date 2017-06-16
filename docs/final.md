@@ -153,9 +153,9 @@ For **quantitative evaluation**, we plotted the reward values in a graph to see 
 
 * **Level 0:** <br>
 (In this level the reward of the goal block is 300) <br>
-* __Agent 1 (-10 reward for each jump):__
+__Agent 1 (-10 reward for each jump):__
 The optimal path of level 1(agent1) is *(1,1) moves-\> (1,2) moves-\> (1,3) moves-\> (1,4) jumps-\> (1,6)*. It takes 4 actions, 3 moves and 1 jump. Therefore, the best reward we can get is 300 - 3 - 10 = 287. The evaluation graph shows how the agent successfully finds the solution with the highest reward. Notice how towards the end the value converges to 287.<br>
-* __Agent 2 (-301 reward for each jump):__
+__Agent 2 (-301 reward for each jump):__
 One of the optimal path of level 0(agent2) is *(1,1) moves-\> (2,1) moves-\> (3,1) moves-\> (4,1) moves-\> (5,1) moves-\> (6,1) moves-\> (6,2) moves-\> (6,3) moves-\> (6,4) moves-\> (6,5) moves-\> (6,6) moves-\> (5,6) moves-\> (4,6) moves-\> (3,6) moves-\> (2,6) moves-\> (1,6)*. It takes 15 actions. Therefore, the best reward we can get is 285. The evaluation graph shows how the agent successfully finds the solution with the highest reward. Notice how towards the end the value converges to 285.
 <center><img src="images/level0optimalpath.png" title="lvl 0 optimal path" width="345" height="301" />
 <img src="images/ev01.png" title="Cumulative Rewards lvl 0 agent1" width="345" height="345" />
