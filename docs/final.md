@@ -75,6 +75,15 @@ Gamma is the discount factor. It determines the importance of future information
 **Random Action:** Epsilon is the possibility of taking a random action instead of the best one.<br><br>
 **Immediate Reward Value:** r is the immediate reward value. <br><br>
 **Max Q Value:** The action has the highest utility value in next state will become the new Q value of that states. <br>
+ 
+__The reason we chose this parameter set:__<br>
+We changed these parameter to see the effects on agent's performance. We tested the agent's performance with different parameter sets(total: 80 combinations). The test was based on level 1(we were plannning to get data from level2,3,4 also, however, it took a long time to get all the data. Therefore, we only got data from level 1).<br>
+```python
+elist = [0.01,0.1,0.3,0.5] #list of epsilon, 4 values
+alist = [0.05,0.1,0.5,0.75,1] #list of alpha, 5 values
+glist = [0.25,0.5,0.75,1] #list of gamma, 4 values
+```
+For each of the combinations, we plotted a graph. We find out alpha = 0.1, gama = 1.0 and epsilon = 0.01 fits all of our maps. A large alpha value(0.75) and gamma value(0.75) will let the agent find the best reward sooner in a simple map(level 1) but it will not work in a very complex map(level 4).<br> 
 
 **Initial Q Values** <br>
 We decided to give each state 8 initial Q Values where the first 4 values are 0 and the last 4 are -2. These values were set to make the agent prefer walking over jumping initially until walking's Q value drops to -2. This was only used for levels 1, 2, 3.
@@ -164,13 +173,7 @@ The optimal path of level 3 is *(1,1) moves-\> (1,2) moves-\> (1,3) moves-\> (2,
 
 
 <br>
-* In addition to plotting graphs, we decided to use a second method for **quantitative evaluation**. We evaluated our project by checking how long it takes the agent to solve each mazes. That is, we wanted the agent to slove the maze as quick as it can. We used the Cumulative Rewards Table to check how many runs it takes before getting the best reward. The best result we got so far is, the agent 1 needs 48 runs in level 0, the agnet 2 needs 135 runs in level 0, the agent 1 needs 44 runs in level 1, 56 runs in level 2, 104 runs in level 3 and 251 runs in level 4. We improved this by changing our reward function and Q-Learning parameter. We wanted to see how changes on these parameter can affect agent's performance. Therefore, we tested the agent's performance with different parameter sets(total: 80 combinations). The test was based on level 1(we were plannning to get data from level2,3,4 also, however, it took a long time to get all the data. Therefore, we only got data from level 1).<br>
-```python
-elist = [0.01,0.1,0.3,0.5] #list of epsilon, 4 values
-alist = [0.05,0.1,0.5,0.75,1] #list of alpha, 5 values
-glist = [0.25,0.5,0.75,1] #list of gamma, 4 values
-```
-For each of the combinations, we plotted a graph. We also plotted 
+* In addition to plotting graphs, we decided to use a second method for **quantitative evaluation**. We evaluated our project by checking how long it takes the agent to solve each mazes. That is, we wanted the agent to slove the maze as quick as it can. We used the Cumulative Rewards Table to check how many runs it takes before getting the best reward. The best result we got so far is, the agent 1 needs 48 runs in level 0, the agnet 2 needs 135 runs in level 0, the agent 1 needs 44 runs in level 1, 56 runs in level 2, 104 runs in level 3 and 251 runs in level 4. We improved this by changing our reward function and Q-Learning parameter. <br>
 <center><img src="images/trialtable.jpeg" title="trials table" width="670" height="120" /></center><br>
 
 
